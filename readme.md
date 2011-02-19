@@ -13,7 +13,7 @@ Focus is on Campaigns initially, then fill in template stuff after
 Commands
 --------
 * Campaign
-  * List all Campaigns
+  x List all Campaigns/Switch from menu
   * campaignContent (pull)
   * campaignUpdate (push)
   * Render Campaign Text 
@@ -30,6 +30,15 @@ Commands
   * generateText : returns text version of HTML would be most common case (ie: preview text version)) 
   * inlinecss : takes proper HTML/CSS and turns out mush for LCD mail clients :) this is super handy
   * ping - make sure chimp is alive!
+
+Getting Started
+---------------
+
+* make a new folder for your project. create a file, **mc.ini** inside that folder
+* inside **mc.ini** add the line: api\_key="YourAPIKeyHereOk-us2"
+* drag folder onto Textmate to make a new project
+* Campaign: Checkout will modify your mc.ini to include the campaign ID you select.
+
 
 Followup
 --------
