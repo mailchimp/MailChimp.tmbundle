@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+include getenv('TM_BUNDLE_PATH').DIRECTORY_SEPARATOR.'test'.DIRECTORY_SEPARATOR.'test_config.php';
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^!</string>
+	<key>name</key>
+	<string>Test: config</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>uuid</key>
+	<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
+</dict>
+</plist>
