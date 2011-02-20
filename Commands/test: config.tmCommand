@@ -11,8 +11,6 @@ include getenv('TM_BUNDLE_PATH').DIRECTORY_SEPARATOR.'Test'.DIRECTORY_SEPARATOR.
 </string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^!</string>
 	<key>name</key>
 	<string>Test: config</string>
 	<key>output</key>

@@ -24,6 +24,7 @@ if(empty($response)) {
     exit( 'Cancelled.');
 }
 
+//@todo refactor this - some helper method to extract value/keys??
 $xml = new SimpleXMLElement($response);
 
 for ($i=0; $i < count($xml->dict->key); $i++) { 
