@@ -3,4 +3,5 @@ todo
 
 potential features
 
+* campaignSendTest - trigger a send test to email addy. of course, would need to throw email addy into the config
 * campaignReplicate could be cool
