@@ -27,8 +27,9 @@
 				<key>items</key>
 				<array>
 					<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
-					<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
 					<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
+					<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
+					<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
 				</array>
 				<key>name</key>
 				<string>Helper</string>
@@ -70,6 +71,7 @@
 		<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
 		<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
 		<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
+		<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
 		<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
 		<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
 		<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>

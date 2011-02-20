@@ -28,7 +28,7 @@ Commands
   * Preview HTML
   
 * Helpers (transformers, previews)
-  * generateText : returns text version of HTML would be most common case (ie: preview text version)) 
+  * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
   * x inlinecss : Will take the document you are working on, pass it through MailChimp's inlineCSSer, and replace the text. You can actually work in steps with this, writing just the styles you need, and then triggering. to build up the inline. (make video to make this clearer)
   * x ping - make sure chimp is alive!
 
