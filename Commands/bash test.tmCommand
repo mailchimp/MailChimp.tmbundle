@@ -18,7 +18,7 @@ exit_show_tool_tip
 	<key>input</key>
 	<string>selection</string>
 	<key>name</key>
-	<string>bash test</string>
+	<string>Test: bash</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>uuid</key>

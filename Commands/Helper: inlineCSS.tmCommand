@@ -4,16 +4,10 @@
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
-	<key>command</key>
-	<string># just to remind you of some useful environment variables
-# see Help / Environment Variables for the full list
-echo File: "$TM_FILEPATH"
-echo Word: "$TM_CURRENT_WORD"
-echo Selection: "$TM_SELECTED_TEXT"</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>name</key>
-	<string>Helper: inlineCSS</string>
+	<string>Helper: inlineCSS •</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>uuid</key>

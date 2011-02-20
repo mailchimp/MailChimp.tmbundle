@@ -18,7 +18,7 @@ Commands
   * x campaignUpdate (upload) (limitation: html only works for pushing to campaign that did import. templates need some help)
   * Render Campaign Text 
   * Render Campaign HTML (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)
-  * Merge Tags Cheat Sheet
+  * x Merge Tags Menu (from list) Insertion
   
 * Templates
   * List all Templates
