@@ -17,7 +17,7 @@ if ($api->errorCode){
 	echo "\n\tCode=".$api->errorCode;
 	echo "\n\tMsg=".$api->errorMessage."\n";
 } else {
-
+    //pull out campaign info, prep it for TM 
     $collector = array();
     foreach($retval['data'] as $campaign){
         $temp = '{title="%s";campaign_id="%s";}';
