@@ -8,12 +8,12 @@
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign switch)
-echo $THEOUTPUT
 if [[ $THEOUTPUT == "" ]]; then
 	echo "Switched campaigns..."
 	rescan_project
 	exit_show_tool_tip
 fi
+echo $THEOUTPUT
 exit_show_html
 </string>
 	<key>input</key>
