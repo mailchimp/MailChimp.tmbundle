@@ -6,6 +6,8 @@ re: for MC
     - ok, so more investigation - yes ,this seems to be something to 
     do with how campaigns html/templates are setup. may need to ask for some advice 
     is there a way to change a campaign to html when its been setup as a template?
+    - looking at things like content_type which is returned in the campaign info - however seems to be NULL in cases, even though it should have a value
+      so how can i tell a template one frmo an html one?
   
 
 re: filetypes
