@@ -25,6 +25,10 @@ if ($api->errorCode){
     }
     
     $response = $UI->menu($collector);
+    
+    if(empty($response)) {
+        exit( 'Cancelled.');
+    }
 
     $xml = new SimpleXMLElement($response);
 
