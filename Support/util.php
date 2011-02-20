@@ -18,7 +18,7 @@ class mUtil {
 
         for ($i=0; $i < count($xml->dict->key); $i++) { 
             if($key == $xml->dict->key[$i]) {
-                return $xml->dict->string[$i];
+                return (string)$xml->dict->string[$i];
             }
         }
         

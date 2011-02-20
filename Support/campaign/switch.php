@@ -27,13 +27,7 @@ if(empty($response)) {
 //@todo refactor this - some helper method to extract value/keys??
 $xml = new SimpleXMLElement($response);
 
-for ($i=0; $i < count($xml->dict->key); $i++) { 
-    if('campaign_id' == $xml->dict->key[$i]) {
-        $config->campaign_id = $xml->dict->string[$i];
-    }
-    if('list_id' == $xml->dict->key[$i]) {
-        $config->list_id = $xml->dict->string[$i];
-    }
-}
+$config->campaign_id = $tool->getValue($xml, 'campaign_id');
+$config->list_id = $tool->getValue($xml, 'list_id');
 
 $config->save();
