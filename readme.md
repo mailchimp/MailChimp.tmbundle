@@ -15,8 +15,10 @@ Commands
 * Campaign
   * x List all Campaigns & Switch from menu
   * x campaignContent (get)
-  * x campaignUpdate (upload) (limitation: html only works for pushing to campaign that did import. templates need some help)
+  * x campaignUpdate (upload) 
+    * (known limitation: html only works for pushing to campaign that did import. templates need some work)
   * Render Campaign Text 
+    * x remote - archive version
   * Render Campaign HTML
     * x remote - archive version
     * (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)

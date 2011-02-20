@@ -10,7 +10,4 @@
 $retval = $api->campaignContent($config->campaign_id, true);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem getting Preview Archive.');
 
-
-
-echo ('html' == $id) ? $retval['html'] : $retval['text'];
-
+echo ('html' == $id) ? $retval['html'] : '<pre>'.$retval['text'].'</pre>';
