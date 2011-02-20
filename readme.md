@@ -13,8 +13,8 @@ Focus is on Campaigns initially, then fill in template stuff after
 Commands
 --------
 * Campaign
-  x List all Campaigns & Switch from menu
-  x campaignContent (get)
+  * x List all Campaigns & Switch from menu
+  * x campaignContent (get)
   * campaignUpdate (upload)
   * Render Campaign Text 
   * Render Campaign HTML (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)
