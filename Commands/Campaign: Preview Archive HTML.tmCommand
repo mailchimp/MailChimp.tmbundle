@@ -4,12 +4,20 @@
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+"$TM_BUNDLE_SUPPORT/runner.php" campaign preview html
+
+</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Preview Archive HTML •</string>
+	<string>Campaign: Preview Remote HTML (As Seen In Archive)</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>E38A7242-12D9-47F4-915A-37200980ABA8</string>
 </dict>
