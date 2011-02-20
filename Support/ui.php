@@ -67,19 +67,48 @@ class UI {
      * Generate a popup menu 
      * Can specify what it inserts. Otherwise, not sure about the use here. 
      * Good for autocomplete
-     * 
+     *
+     * @param array $opts expects $opts = array(array('display'=>'display name', 'insert'=>'to_insert)...)
      * @return null No response - it writes out to the document you are editing.
      **/
-    public function popup() {
-        // $opt = array();
-        // foreach ($items as $value) {
-        //     $opt[] = '{title = "'.$value.'";}';
-        // }
-        // $optstring = '('.implode(',', $opt) .')';
+    public function popup($opts) {
         
-        $optstring = '( { display = law; }, { display = laws; insert = "(${1:hello}, ${2:again})"; } )';
+        $opt = array();
+        foreach ($opts as $option) {
+            if(is_array($option)) {
+                $item =  '{display = "'.$option['display'].'"; insert='.$option['insert'].';}';
+            } else {
+                $item =  '{display = "'.$option.'";}';
+            }
+            
+            $opt[] = $item;
+        }
+        $optstring = '('.implode(',', $opt) .')';
+        
+        // $optstring = '( { display = law; }, { display = laws; insert = "(${1:hello}, ${2:again})"; } )';
         `{$this->dialog} popup --suggestions '{$optstring}'`;
     }
+
+
+    public function popup_x($opts) {
+        
+        $opt = array();
+        foreach ($opts as $option) {
+            if(is_array($option)) {
+                $item =  '{display = "'.$option['display'].'"; insert='.$option['insert'].';}';
+            } else {
+                $item =  '{display = "'.$option.'";}';
+            }
+            
+            $opt[] = $item;
+        }
+        $optstring = '('.implode(',', $opt) .')';
+        
+        // $optstring = '( { display = law; }, { display = laws; insert = "(${1:hello}, ${2:again})"; } )';
+        $response = `{$this->dialog} popup  --returnChoice --suggestions '{$optstring}'`;
+        var_dump($response);
+    }
+
     
 
     //used for deving the nibs - this flushes out all the old NIBs hanging around

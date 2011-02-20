@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign merge_vars)
+if [[ $THEOUTPUT == "" ]]; then
+  exit_discard
+fi
+echo $THEOUTPUT
+exit_create_new_document
+exit_show_tool_tip
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^@</string>
+	<key>name</key>
+	<string>Campaign: Insert Merge Var</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
+</dict>
+</plist>
