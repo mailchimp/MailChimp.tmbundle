@@ -2,17 +2,51 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>
+			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
+		</array>
+		<key>submenus</key>
+		<dict>
+			<key>F33C70E9-C8BD-483D-A756-9DA3546A5853</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
+					<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
+					<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
+					<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
+				</array>
+				<key>name</key>
+				<string>Test</string>
+			</dict>
+			<key>F671A52D-09DE-4728-9BD3-9261091BF70E</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>FA574857-9269-43CB-895E-274A8D4F2568</string>
+					<string>BB1EB225-D122-4338-90C3-8F0A768EAB1A</string>
+					<string>2D04C020-9894-4260-84D7-46A3161FAD01</string>
+				</array>
+				<key>name</key>
+				<string>Campaign</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>name</key>
 	<string>mailchimp</string>
 	<key>ordering</key>
 	<array>
-		<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
-		<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
-		<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
-		<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
 		<string>FA574857-9269-43CB-895E-274A8D4F2568</string>
 		<string>BB1EB225-D122-4338-90C3-8F0A768EAB1A</string>
 		<string>2D04C020-9894-4260-84D7-46A3161FAD01</string>
+		<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
+		<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
+		<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
+		<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
 	</array>
 	<key>uuid</key>
 	<string>51236356-25E8-498D-A5C1-68312B715215</string>
