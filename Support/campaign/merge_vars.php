@@ -5,10 +5,24 @@ $UI = new UI(getenv('DIALOG'));
 $mergevars = $api->listMergeVars($config->list_id);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Unable to get list merge vars!');
 
-$mList = array();
+$collector = array();
 foreach ($mergevars as $mvar) {
-    $mList[] = array('display'=>$mvar['name'], 'insert'=>$mvar['tag']);
+    $temp = '{title="%s";tag="%s";}';
+    $collector[] = sprintf($temp, $mvar['name'], $mvar['tag']);
 }
 
-$UI->popup($mList);
+$response = $UI->menu($collector);
 
+if(empty($response)) {
+    exit('');
+}
+
+$xml = new SimpleXMLElement($response);
+
+for ($i=0; $i < count($xml->dict->key); $i++) { 
+    if('tag' == $xml->dict->key[$i]) {
+        $tag = $xml->dict->string[$i];
+    }
+}
+
+echo "*|{$tag}|*";
