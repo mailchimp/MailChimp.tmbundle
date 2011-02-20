@@ -1,7 +1,11 @@
 <?php
+//Some project specific defines
+define('HTML_NAME', 'html.html');
+define('TXT_NAME', 'text.txt');
+define('CONFIG_FILE_PATH', getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'mc.ini');
 
 /**
-* Config
+* mConfig
 *
 * load up any needed configs
 * save any needed configs

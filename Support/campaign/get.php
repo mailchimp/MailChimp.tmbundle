@@ -13,8 +13,8 @@ $oopsy->go($api->errorCode, $api->errorMessage, 'Problem getting.');
 $html = $retval['html'];
 $text = $retval['text'];
 
-file_put_contents(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'html.html', $html);
-echo 'html.html written<br>';
+file_put_contents(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.HTML_NAME, $html);
+echo HTML_NAME.' written<br>';
 
-file_put_contents(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'text.txt', $text);
-echo 'text.txt written<br>';
+file_put_contents(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.TEXT_NAME, $text);
+echo TEXT_NAME.' written<br>';
