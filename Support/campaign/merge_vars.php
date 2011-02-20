@@ -14,7 +14,7 @@ foreach ($mergevars as $mvar) {
 $response = $UI->menu($collector);
 
 if(empty($response)) {
-    exit('');
+    exit();
 }
 
 $xml = new SimpleXMLElement($response);

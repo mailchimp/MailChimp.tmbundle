@@ -3,13 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>nop</string>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+"$TM_BUNDLE_SUPPORT/runner.php" helper inline_css</string>
+	<key>fallbackInput</key>
+	<string>document</string>
 	<key>input</key>
-	<string>selection</string>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
 	<key>name</key>
-	<string>Helper: inlineCSS •</string>
+	<string>Helper: inlineCSS</string>
 	<key>output</key>
-	<string>replaceSelectedText</string>
+	<string>replaceDocument</string>
 	<key>uuid</key>
 	<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
 </dict>

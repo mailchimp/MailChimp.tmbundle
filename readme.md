@@ -29,8 +29,8 @@ Commands
   
 * Helpers (transformers, previews)
   * generateText : returns text version of HTML would be most common case (ie: preview text version)) 
-  * inlinecss : takes proper HTML/CSS and turns out mush for LCD mail clients :) this is super handy
-  * ping - make sure chimp is alive!
+  * x inlinecss : Will take the document you are working on, pass it through MailChimp's inlineCSSer, and replace the text. You can actually work in steps with this, writing just the styles you need, and then triggering. to build up the inline. (make video to make this clearer)
+  * x ping - make sure chimp is alive!
 
 Getting Started
 ---------------
