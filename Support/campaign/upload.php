@@ -16,7 +16,6 @@ $type = $type[0];
 $content = file_get_contents(getenv('TM_FILEPATH'));
 
 $retval = $api->campaignUpdate($config->campaign_id, 'content', array($type=>$content));
-
 $oopsy->go($api->errorCode, $api->errorMessage, "Problem uploading {$filename}");
 
-var_dump($retval);
+//Don't bother with retval, since oopsy will catch error.
