@@ -13,7 +13,7 @@ Focus is on Campaigns initially, then fill in template stuff after
 Commands
 --------
 * Campaign
-  x List all Campaigns/Switch from menu
+  x List all Campaigns & Switch from menu
   * campaignContent (get)
   * campaignUpdate (upload)
   * Render Campaign Text 

@@ -1,19 +1,16 @@
 <?php
 /**
- * Checkout a copy of a campaign. v1
+ * Switch your config to a different campaign
  *
  * @author Mitchell Amihod
  */
 
-$config = new mConfig(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'mc.ini');
-
-$api = new MCAPI($config->api_key);
 $UI = new UI(getenv('DIALOG'));
 
 $retval = $api->campaigns();
 
 if ($api->errorCode){
-	echo "Unable to Pull list of Campaign!";
+	echo "Unable to get list of Campaign!";
 	echo "\n\tCode=".$api->errorCode;
 	echo "\n\tMsg=".$api->errorMessage."\n";
 } else {
