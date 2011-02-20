@@ -19,7 +19,7 @@ exit_show_html
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^@</string>
+	<string>^#</string>
 	<key>name</key>
 	<string>Campaign: Switch</string>
 	<key>output</key>

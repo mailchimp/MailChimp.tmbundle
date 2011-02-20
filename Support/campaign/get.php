@@ -6,9 +6,15 @@
  */
 
 //Get RAW content
-$retval = $api->campaignContent($config->campaign_id, true);
-
+//so, archived view shows what it would look like on the website oi guess ?
+$retval = $api->campaignContent($config->campaign_id, false);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem getting.');
 
+$html = $retval['html'];
+$text = $retval['text'];
 
-// var_dump($retval);
+file_put_contents(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'html.html', $html);
+echo 'html.html written<br>';
+
+file_put_contents(getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'text.txt', $text);
+echo 'text.txt written<br>';

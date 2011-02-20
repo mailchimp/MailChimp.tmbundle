@@ -1,6 +1,5 @@
 todo 
 
-* handle api->error in a more generailized manner
 
 potential features
 
