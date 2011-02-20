@@ -4,20 +4,13 @@
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
-	<key>command</key>
-	<string>#!/usr/bin/env bash
-source "$TM_SUPPORT_PATH/lib/bash_init.sh"
-"$TM_BUNDLE_SUPPORT/runner.php" campaign merge_vars
-</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Insert Merge Var</string>
+	<string>Campaign: Preview Archive HTML</string>
 	<key>output</key>
-	<string>afterSelectedText</string>
+	<string>discard</string>
 	<key>uuid</key>
-	<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
+	<string>E38A7242-12D9-47F4-915A-37200980ABA8</string>
 </dict>
 </plist>
