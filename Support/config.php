@@ -8,6 +8,10 @@
 *
 * Using phpini files
 *
+* @todo fallback to API_KEY in project/application env var
+*       this will allow for using commands like inlineCSS from outside of MC only projects,
+*       which, if nothing else, might lead to people giving MC a shot even if 
+*       they are happy where they are now.
 */
 class mConfig {
     
