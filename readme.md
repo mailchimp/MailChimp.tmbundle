@@ -23,7 +23,8 @@ Commands
 * Templates
   * List all Templates
   * addnew / update (push + pull)
-    * incorporate uploading static assets elsewhere (TBD - will talk to MC peeps about adding upload zip functionality via api - same way you can do it via a form right now in the admin backend.)
+    * incorporate uploading static assets elsewhere 
+    (createCampaign seems you can set content as archive - so, there should be a way to do that via update)
   * Preview HTML
   
 * Helpers (transformers, previews)
