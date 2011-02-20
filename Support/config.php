@@ -24,11 +24,12 @@ class mConfig {
     //These get set on load of the .ini file.
     var $api_key = null;
     var $campaign_id = null;
-
+    var $list_id = null;
+    
     function __construct($path) {
 
         if(!file_exists($path)) {
-            trigger_error("Missing config file: {$path}");
+            trigger_error("Missing config file: {$path}", E_USER_ERROR);
             exit();
         }
         
@@ -43,7 +44,7 @@ class mConfig {
      * @return void
      **/
     public function save() {
-        $to_write = array('api_key', 'campaign_id');
+        $to_write = array('api_key', 'campaign_id', 'list_id');
         $output = '';
         foreach ($to_write as $key) {
             $output.= $this->_ini_line($key, $this->{$key}, true);
@@ -54,7 +55,7 @@ class mConfig {
     }
     
 	/**
-	 * undocumented function
+	 * create the ini line
 	 *
 	 * @return string
 	 **/
