@@ -1,3 +1,7 @@
+re: Templates
+  * Whats kept more up to date? github Email Blueprints or Base Templates?
+  Need to know whats important about templates from MC, how they should be mixed into a workflow
+
 re: for MC
   * having issue uploading HTML - txt no problem, but not sure why i'm failing uploading the html. 
   I'm wondering if it has something to do with html vs template? api returns true, so in theory, its succeeding.

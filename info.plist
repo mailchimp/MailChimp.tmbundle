@@ -7,6 +7,7 @@
 		<key>items</key>
 		<array>
 			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>
+			<string>F0118E02-401A-406E-8D6D-5A0D85D26F2F</string>
 			<string>419523D0-5D90-44D3-A683-2F1E684DF13F</string>
 			<string>2D7993E7-1E00-4759-999F-D27744FE8BC1</string>
 			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
@@ -34,6 +35,16 @@
 				</array>
 				<key>name</key>
 				<string>Helper</string>
+			</dict>
+			<key>F0118E02-401A-406E-8D6D-5A0D85D26F2F</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+					<string>C39CCBE3-1F4F-4C52-AC5F-4EAD31EA5927</string>
+				</array>
+				<key>name</key>
+				<string>Templates</string>
 			</dict>
 			<key>F33C70E9-C8BD-483D-A756-9DA3546A5853</key>
 			<dict>
@@ -74,6 +85,9 @@
 		<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
 		<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
 		<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
+		<string>C39CCBE3-1F4F-4C52-AC5F-4EAD31EA5927</string>
+		<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+		<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
 		<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
 		<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
 		<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
