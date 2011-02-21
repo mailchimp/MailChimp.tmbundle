@@ -24,12 +24,14 @@ Commands
     * (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)
   * x Merge Tags Menu (from list) Insertion
   
-* Templates
+* Templates (needs some more information re: direction for templates)
   * List all Templates
+    * one facet working
   * addnew / update (push + pull)
     * incorporate uploading static assets elsewhere 
     (createCampaign seems you can set content as archive - so, there should be a way to do that via update)
-  * Preview HTML
+  * x Preview HTML
+  
   
 * Helpers (transformers, previews)
   * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
