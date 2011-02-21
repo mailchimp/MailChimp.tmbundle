@@ -11,7 +11,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^@</string>
+	<string>^#</string>
 	<key>name</key>
 	<string>Template: Preview</string>
 	<key>output</key>
