@@ -23,6 +23,7 @@ Commands
     * x remote - archive version
     * (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)
   * x Merge Tags Menu (from list) Insertion
+  * Merge Tag Cheat Sheet?
   
 * Templates (needs some more information re: direction for templates)
   * x List all Templates ( Template: Source / Preview  )
@@ -42,9 +43,10 @@ Getting Started
 ---------------
 
 * make a new folder for your project. create a file, **mc.ini** inside that folder
-* inside **mc.ini** add the line: api\_key="YourAPIKeyHereOk-us2"
+* inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
 * drag folder onto Textmate to make a new project
-* Campaign: Checkout will modify your mc.ini to include the campaign ID you select.
+* Campaign: Select will allow you switch between campaigns
+* Campaign: Get will download the .html + .txt
 
 
 Followup
@@ -63,4 +65,3 @@ IDEAS
 
 * snippets for template dev (is there a bundle already we can integrate with?)
 * mailchimp tm language file - http://mailchimp.com/features/template-language/
-
