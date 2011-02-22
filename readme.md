@@ -25,11 +25,11 @@ Commands
   * x Merge Tags Menu (from list) Insertion
   
 * Templates (needs some more information re: direction for templates)
-  * List all Templates
-    * one facet working
+  * x List all Templates ( Template: Source / Preview  )
   * addnew / update (push + pull)
     * incorporate uploading static assets elsewhere 
-    (createCampaign seems you can set content as archive - so, there should be a way to do that via update)
+    (createCampaign seems you can set content as archive - 
+    so, there should be a way to do that via update)
   * x Preview HTML
   
   
@@ -63,4 +63,4 @@ IDEAS
 
 * snippets for template dev (is there a bundle already we can integrate with?)
 * mailchimp tm language file - http://mailchimp.com/features/template-language/
-* bonus points: allow people to load a template from the github repo.
+
