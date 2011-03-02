@@ -15,8 +15,13 @@ Commands
 * Campaign
   * x List all Campaigns & Switch from menu
   * x campaignContent (get)
-  * x campaignUpdate (upload) 
+  * x Upload HTML or Text: Allows uploading of text.txt or html.html file. 
     * (known limitation: html only works for pushing to campaign that did import. templates need some work)
+  * x Zip Project and Upload
+    * Create a new folder/project. Work as normal. When ready, use this command to push all assets up.
+    * This command will IGNORE a folder called \_local if you have one in your project.   
+      This is a good place to keep notes, assets, etc that relate to the project, but don't   
+      get uploaded
   * Render Campaign Text 
     * x remote - archive version
   * Render Campaign HTML
@@ -24,6 +29,7 @@ Commands
     * (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)
   * x Merge Tags Menu (from list) Insertion
   * Merge Tag Cheat Sheet?
+  * x Info on current campaign
   
 * Templates (needs some more information re: direction for templates)
   * x List all Templates ( Template: Source / Preview  )
