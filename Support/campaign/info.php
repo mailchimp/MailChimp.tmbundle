@@ -4,7 +4,6 @@
  *
  **/
 $retval = $api->campaigns(array('campaign_id'=>$config->campaign_id));
-// $retval = $api->campaigns(array('campaign_id'=>'sksksks'));
 
 if(false == $retval) {
     echo "I'm sorry, but it seems there is a problem with getting info about this campaign.".
