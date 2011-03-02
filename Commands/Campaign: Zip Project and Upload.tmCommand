@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign tgz_upload)
+echo $THEOUTPUT
+if [[ $THEOUTPUT == "" ]]; then
+	echo "Uploaded..."
+	exit_show_tool_tip
+fi
+exit_show_html
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^@</string>
+	<key>name</key>
+	<string>Campaign: Zip Project and Upload</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>F1BF7E52-4E44-47BF-802F-46AD9FCABEC7</string>
+</dict>
+</plist>
