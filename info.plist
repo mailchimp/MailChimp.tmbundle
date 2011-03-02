@@ -11,6 +11,7 @@
 			<string>419523D0-5D90-44D3-A683-2F1E684DF13F</string>
 			<string>2D7993E7-1E00-4759-999F-D27744FE8BC1</string>
 			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
+			<string>466F480E-1D16-402A-9289-91EC820519FB</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -35,6 +36,15 @@
 				</array>
 				<key>name</key>
 				<string>Helper</string>
+			</dict>
+			<key>466F480E-1D16-402A-9289-91EC820519FB</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>9D53DA7E-E721-42F7-8EE6-7BE34EA88886</string>
+				</array>
+				<key>name</key>
+				<string>Macros Example</string>
 			</dict>
 			<key>F0118E02-401A-406E-8D6D-5A0D85D26F2F</key>
 			<dict>
