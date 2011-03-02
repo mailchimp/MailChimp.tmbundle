@@ -7,7 +7,7 @@
 
 $UI = new UI(getenv('DIALOG'));
 
-$retval = $api->campaigns();
+$retval = $api->campaigns(array('status'=> 'save'));
 $oopsy->go($api->errorCode, $api->errorMessage, 'Unable to get list of Campaign!');
 $campaigns = $retval['data'];
 

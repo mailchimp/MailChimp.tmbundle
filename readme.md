@@ -13,7 +13,7 @@ Focus is on Campaigns initially, then fill in template stuff after
 Commands
 --------
 * Campaign
-  * x List all Campaigns & Switch from menu
+  * x Select: Choose which campaign to work on. Only displays draft (saved) campaigns
   * x campaignContent (get)
   * x Upload HTML or Text: Allows uploading of text.txt or html.html file. 
     * (known limitation: html only works for pushing to campaign that did import. templates need some work)
