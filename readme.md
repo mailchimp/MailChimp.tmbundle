@@ -48,6 +48,12 @@ Getting Started
 * Campaign: Select will allow you switch between campaigns
 * Campaign: Get will download the .html + .txt
 
+Things you should know
+----------------------
+
+* If you have a folder called **\_local** the bundle will ignore it by default
+  This gives you a place to store notes, assets and whatnot as you work. 
+
 
 Followup
 --------

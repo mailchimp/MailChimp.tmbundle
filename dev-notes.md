@@ -1,5 +1,10 @@
 * ErrorHelper ($oopsy)
   Will echo error msg + exit(), so we avoid the if/else pattern in our command code
+  generally for use with the API calls .
+
+* tar_exclusion_list.txt 
+  This tells the tar command what files to skip over.
+  Will probably need refining with time.
 
 On Templates
 ------------
