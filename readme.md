@@ -57,6 +57,9 @@ Getting Started
 Things you should know
 ----------------------
 
+* Macros: In general, tried to keep the pieces of the bundle fairly tight - small responsibilities
+  This will allow you (the user) to setup commands which meet your workflow needs more precisely
+  For example, see the Upload and Preview macro included with this bundle.
 * If you have a folder called **\_local** the bundle will ignore it by default
   This gives you a place to store notes, assets and whatnot as you work. 
 
