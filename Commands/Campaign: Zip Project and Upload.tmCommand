@@ -18,7 +18,7 @@ exit_show_html
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^@</string>
+	<string>^#</string>
 	<key>name</key>
 	<string>Campaign: Zip Project and Upload</string>
 	<key>output</key>
