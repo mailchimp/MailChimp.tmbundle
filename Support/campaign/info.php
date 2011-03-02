@@ -6,9 +6,9 @@
 $retval = $api->campaigns(array('campaign_id'=>$config->campaign_id));
 
 if(false == $retval) {
-    echo "I'm sorry, but it seems there is a problem with getting info about this campaign.".
-            "<br>Are you sure you have setup your config?";
-    return;
+    $err_msg = "I'm sorry, but it seems there is a problem with getting info about this campaign.".
+               "<br>Are you sure you have setup your config?";
+    $oopsy->go(999, $err_msg);
 }
 
 $ignoreFields = array('tracking', 'segment_opts', 'segment_text', 'type_opts' );
