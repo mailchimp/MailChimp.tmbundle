@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+"$TM_BUNDLE_SUPPORT/runner.php" helper inline_css</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
+	<key>name</key>
+	<string>Helper: inlineCSS</string>
+	<key>output</key>
+	<string>replaceDocument</string>
+	<key>uuid</key>
+	<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
+</dict>
+</plist>

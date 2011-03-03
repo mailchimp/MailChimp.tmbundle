@@ -1,0 +1,6 @@
+mc.ini
+*_local*
+*._*
+*.git*
+*.gitignore*
+*.svn*

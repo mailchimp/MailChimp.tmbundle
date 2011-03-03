@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+"$TM_BUNDLE_SUPPORT/runner.php" template do source</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
+	<key>name</key>
+	<string>Template: Source</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>uuid</key>
+	<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
+</dict>
+</plist>

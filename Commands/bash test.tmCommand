@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+THEOUTPUT=$("$TM_BUNDLE_PATH/test/bash.php" foo)
+echo $THEOUTPUT
+if [[ $THEOUTPUT == "testing2" ]]; then
+	exit_create_new_document
+fi
+
+exit_show_tool_tip
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Test: bash</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>uuid</key>
+	<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
+</dict>
+</plist>

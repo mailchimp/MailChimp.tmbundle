@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign upload)
+echo $THEOUTPUT
+if [[ $THEOUTPUT == "" ]]; then
+	echo "Uploaded..."
+	exit_show_tool_tip
+fi
+exit_show_html
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
+	<key>name</key>
+	<string>Campaign: Upload HTML or Text</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>uuid</key>
+	<string>2D04C020-9894-4260-84D7-46A3161FAD01</string>
+</dict>
+</plist>
