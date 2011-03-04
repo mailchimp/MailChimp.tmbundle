@@ -39,13 +39,9 @@ Commands
               ie: you can only Upload your User templates, so it might make sense to split this into 2 distinct functions
               one to load a user template/ set the template_id for the current project, and one just to suck in a 
               gallery or base template as a starting point without setting the template ID
-  * addnew / update (push + pull)
-    * incorporate uploading static assets elsewhere 
-    (createCampaign seems you can set content as archive - 
-    so, there should be a way to do that via update)
-  * x Preview HTML
-  
-  
+  * x Upload: Will upload your USER template that you are currently working on. 
+
+
 * Helpers (transformers, previews)
   * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
   * x inlinecss : Will take the document you are working on, pass it through MailChimp's inlineCSSer, and replace the text. You can actually work in steps with this, writing just the styles you need, and then triggering. to build up the inline. (make video to make this clearer)
