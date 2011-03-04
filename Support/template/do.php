@@ -16,9 +16,8 @@ foreach (array_keys($template_options) as $temp_type) {
     $temp_choices[] = sprintf($temp, ucfirst($temp_type), $temp_type);
 }
 $response = $UI->menu($temp_choices);
-if(empty($response)) {
-    exit();
-}
+if(empty($response)) { exit(); }
+
 $xml = new SimpleXMLElement($response);
 $template_type = $tool->getValue($xml, 'id');
 $template_options[$template_type] = true;
