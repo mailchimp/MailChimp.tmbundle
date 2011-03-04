@@ -50,11 +50,29 @@ Commands
 Getting Started
 ---------------
 
+Campaigns
+---------
+
 * make a new folder for your project. create a file, **mc.ini** inside that folder
 * inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
 * drag folder onto Textmate to make a new project
+* Open a file in the project (mc.ini is fine)
 * Campaign: Select will allow you switch between campaigns
 * Campaign: Get will download the .html + .txt
+
+Templates
+---------
+
+(Edit User Templates Only... for now! <dramatic music />!)
+
+* make a new folder for your project. create a file, **mc.ini** inside that folder
+* inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
+* drag folder onto Textmate to make a new project
+* add a new file to the project: index.html (actually, can be anything\_you\_want.html)
+* Use the `Template: Select`. Then, pick the template you would like to work on. 
+
+* You can load code from other templates to use in your project Template: Load
+
 
 Things you should know
 ----------------------
