@@ -15,7 +15,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>name</key>
 	<string>Template: Source</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>replaceDocument</string>
 	<key>uuid</key>
 	<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
 </dict>
