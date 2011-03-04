@@ -1,11 +1,6 @@
 <?php
 /**
  * Template Do
- * Well, not sure yet what to do with templates
- * Whats the frequency of these sorts of operations?
- * So, roll into one for now to show what's possible,
- *
- * Hmm, a bit annoying, need to specify user/base/gallery when passing in template_id to templateInfo() 
  * 
  * I think this is an infrequent enough operation that its not onerous to have to pick from more than one menu.
  *
