@@ -6,7 +6,6 @@
  *
  * @author Mitchell Amihod
  */
-
 $UI = new UI(getenv('DIALOG'));
 
 //Begin Template Type Selection
@@ -27,7 +26,6 @@ $template_options[$template_type] = true;
 $retval = $api->templates($template_options);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem templates do.');
 
-// $templates = array_merge($retval['user'], $retval['base']);
 $templates = $retval[$template_type];
 
 $collector = array();
@@ -39,9 +37,7 @@ foreach($templates as $template){
 
 $response = $UI->menu($collector);
 
-if(empty($response)) {
-    exit();
-}
+if(empty($response)) { exit(); }
 
 $xml = new SimpleXMLElement($response);
 $template_id = $tool->getValue($xml, 'id');

@@ -70,19 +70,18 @@ Templates
 * drag folder onto Textmate to make a new project
 * add a new file to the project: index.html (actually, can be anything\_you\_want.html)
 * Use the `Template: Select`. Then, pick the template you would like to work on. 
-
-* You can load code from other templates to use in your project Template: Load
-
+* `Template: Load` Load Template HTML from other templates (User, Base, or Gallery) to use in your project 
+* `Template: Upload` will send the file back to which ever you set in Template: Select
 
 Things you should know
 ----------------------
 
 * Macros: In general, tried to keep the pieces of the bundle fairly tight - small responsibilities
-  This will allow you (the user) to setup commands which meet your workflow needs more precisely
+  While the bundle has some of the more common workflows, this will allow you   
+  (The User) to setup commands which will let you work how you like.
   For example, see the Upload and Preview macro included with this bundle.
 * If you have a folder called **\_local** the bundle will ignore it by default
   This gives you a place to store notes, assets and whatnot as you work. 
-
 
 Followup
 --------
