@@ -54,8 +54,9 @@ $template_id = $tool->getValue($xml, 'id');
 $template_info = $api->templateInfo($template_id, $template_type);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem Template Info');
 
-//Then we should write out the template id, since we will need it to upload
-if('source' == $id) {
+//Then we should write out the template id 
+//only for user ones, since we will need it to upload
+if( ('source' == $id) && ('user' == $template_type) ) {
     $config->template_id = $template_id;
     $config->save();
 }
