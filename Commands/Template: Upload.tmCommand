@@ -7,16 +7,23 @@
 	<key>command</key>
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
-"$TM_BUNDLE_SUPPORT/runner.php" template do preview</string>
+THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" template upload)
+if [[ $THEOUTPUT == "" ]]; then
+	echo "Uploaded..."
+	exit_show_tool_tip
+fi
+echo "$THEOUTPUT"
+exit_show_html
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Template: Preview From MC</string>
+	<string>Template: Upload</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>openAsNewDocument</string>
 	<key>uuid</key>
-	<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+	<string>71FE5E76-62E8-4905-8A11-BDA3400A88AE</string>
 </dict>
 </plist>

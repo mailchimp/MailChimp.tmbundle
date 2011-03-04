@@ -10,8 +10,9 @@
 			<string>F0118E02-401A-406E-8D6D-5A0D85D26F2F</string>
 			<string>419523D0-5D90-44D3-A683-2F1E684DF13F</string>
 			<string>2D7993E7-1E00-4759-999F-D27744FE8BC1</string>
-			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
 			<string>466F480E-1D16-402A-9289-91EC820519FB</string>
+			<string>------------------------------------</string>
+			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -52,6 +53,7 @@
 				<array>
 					<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
 					<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
+					<string>71FE5E76-62E8-4905-8A11-BDA3400A88AE</string>
 				</array>
 				<key>name</key>
 				<string>Templates</string>

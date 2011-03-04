@@ -31,7 +31,7 @@ Commands
   * Merge Tag Cheat Sheet?
   * x Info on current campaign
   
-* Templates (needs some more information re: direction for templates)
+* Templates
   * x List all Templates ( Template: Source / Preview  )
   * addnew / update (push + pull)
     * incorporate uploading static assets elsewhere 
@@ -68,6 +68,12 @@ Followup
 --------
 
 get feedback from chimp inhouse / top theme people what pain points they have?
+
+
+End User Docs Notes
+-------------------
+
+* Stress this bundle will NOT protect you from yourself. Make sure to use some form of version control. git, hg, bzr, svn
 
 
 Targets
