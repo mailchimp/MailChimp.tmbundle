@@ -32,7 +32,13 @@ Commands
   * x Info on current campaign
   
 * Templates
-  * x List all Templates ( Template: Source / Preview  )
+  * x Preview From MC: Rendered version of the Source (on MC) from our popup preview. Allows you to look at User/Gallery/Base
+  * x Source: Browse and Pull down the source for a template.   
+              Sets the Template ID in mc.ini  
+              Currently allows User/Gallery/Base. This will change to match workflow a bit more 
+              ie: you can only Upload your User templates, so it might make sense to split this into 2 distinct functions
+              one to load a user template/ set the template_id for the current project, and one just to suck in a 
+              gallery or base template as a starting point without setting the template ID
   * addnew / update (push + pull)
     * incorporate uploading static assets elsewhere 
     (createCampaign seems you can set content as archive - 
