@@ -40,8 +40,13 @@ $templates = $retval[$template_type];
 $collector = array();
 foreach($templates as $template){
     $temp = '{title="%s";id="%s";}';
-    $collector[] = sprintf($temp, $template['name'], $template['id']);
+    //Ok, having some issues trying to do replacement on the '
+    //Tried escaping it, no luck. Even though its in a quoted string. 
+    //So, rather than burn hours trying to solve this right now, we can come back to it if its an issue. 
+    $tName = str_replace("'", "", $template['name']);
+    $collector[] = sprintf($temp, $tName, $template['id']);
 }
+
 $response = $UI->menu($collector);
 
 if(empty($response)) {
