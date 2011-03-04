@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" template do source)
+if [[ $THEOUTPUT == "" ]]; then
+  echo "Cancelled..."
+  exit_show_tool_tip
+fi
+echo "$THEOUTPUT"
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
+	<key>name</key>
+	<string>Template: Load from MC</string>
+	<key>output</key>
+	<string>replaceDocument</string>
+	<key>uuid</key>
+	<string>AC8D6A7A-F37A-4D57-9240-C6D16B1FD280</string>
+</dict>
+</plist>

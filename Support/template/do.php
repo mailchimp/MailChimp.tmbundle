@@ -10,8 +10,7 @@
 $UI = new UI(getenv('DIALOG'));
 
 //Begin Template Type Selection
-$template_options = array('user'=>false,'gallery'=>false,'base'=>false );
-
+$template_options = array('user'=>false, 'gallery'=>false,'base'=>false );
 $temp_choices = array();
 foreach (array_keys($template_options) as $temp_type) {
     $temp = '{title="%s";id="%s";}';
@@ -25,7 +24,6 @@ $xml = new SimpleXMLElement($response);
 $template_type = $tool->getValue($xml, 'id');
 $template_options[$template_type] = true;
 ////////End Template Type User Choice Selection
-
 $retval = $api->templates($template_options);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem templates do.');
 
@@ -35,9 +33,6 @@ $templates = $retval[$template_type];
 $collector = array();
 foreach($templates as $template){
     $temp = '{title="%s";id="%s";}';
-    //Ok, having some issues trying to do replacement on the '
-    //Tried escaping it, no luck. Even though its in a quoted string. 
-    //So, rather than burn hours trying to solve this right now, we can come back to it if its an issue. 
     $tName = str_replace("'", "", $template['name']);
     $collector[] = sprintf($temp, $tName, $template['id']);
 }
@@ -53,12 +48,5 @@ $template_id = $tool->getValue($xml, 'id');
 
 $template_info = $api->templateInfo($template_id, $template_type);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem Template Info');
-
-//Then we should write out the template id 
-//only for user ones, since we will need it to upload
-if( ('source' == $id) && ('user' == $template_type) ) {
-    $config->template_id = $template_id;
-    $config->save();
-}
 
 echo $template_info[$id];
