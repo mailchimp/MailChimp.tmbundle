@@ -13,7 +13,7 @@ if( ( $filename != HTML_NAME ) && ($filename != TEXT_NAME)) {
 $type = explode('.',$filename);
 $type = $type[0];
 
-$content = file_get_contents(getenv('TM_FILEPATH'));
+$content = file_get_contents($filename);
 
 $retval = $api->campaignUpdate($config->campaign_id, 'content', array($type=>$content));
 $oopsy->go($api->errorCode, $api->errorMessage, "Problem uploading {$filename}");
