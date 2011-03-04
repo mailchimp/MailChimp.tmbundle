@@ -4,6 +4,8 @@ todo
 * A Merge Vars cheat sheet/reference. we now have popup for list specific ones. could possibly also build up the popup for them with defaults as well?
 * video showing people how to make a macro to combine commmands
 * make Select use save filter, Replicate use sent, archived?
+* better exit/error handlign
+	* Template Source/Preview have conditional output like other commands
 
 potential features
 

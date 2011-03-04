@@ -61,21 +61,21 @@ class mConfig {
         
     }
     
-	/**
-	 * create the ini line
-	 *
-	 * @return string
-	 **/
-	function _ini_line($key, $value, $newline = false) {
+    /**
+     * create the ini line
+     *
+     * @return string
+     **/
+    function _ini_line($key, $value, $newline = false) {
 
-		$line = trim($key).'="'. str_replace('"', '&quot;', $value) .'"';
+        $line = trim($key).'="'. str_replace('"', '&quot;', $value) .'"';
 
-		if($newline) {
-			$line .= "\n";
-		}
+        if($newline) {
+            $line .= "\n";
+        }
 
-		return $line;
-	}
+        return $line;
+    }
     
     
     /**

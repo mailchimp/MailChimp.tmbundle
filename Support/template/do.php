@@ -24,7 +24,7 @@ foreach (array_keys($template_options) as $temp_type) {
 }
 $response = $UI->menu($temp_choices);
 if(empty($response)) {
-    exit( 'Cancelled.');
+    exit();
 }
 $xml = new SimpleXMLElement($response);
 $template_type = $tool->getValue($xml, 'id');
@@ -50,7 +50,7 @@ foreach($templates as $template){
 $response = $UI->menu($collector);
 
 if(empty($response)) {
-    exit( 'Cancelled.');
+    exit();
 }
 
 $xml = new SimpleXMLElement($response);
@@ -59,9 +59,10 @@ $template_id = $tool->getValue($xml, 'id');
 $template_info = $api->templateInfo($template_id, $template_type);
 $oopsy->go($api->errorCode, $api->errorMessage, 'Problem Template Info');
 
-switch (true) {
-    default:
-        # by default, we will ust want to echo out the info $id arg we passed in
-        echo $template_info[$id];
-        break;
+//Then we should write out the template id, since we will need it to upload
+if('source' == $id) {
+    $config->template_id = $template_id;
+    $config->save();
 }
+
+echo $template_info[$id];
