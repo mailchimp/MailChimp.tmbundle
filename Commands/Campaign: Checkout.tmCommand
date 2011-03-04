@@ -13,7 +13,7 @@ if [[ $THEOUTPUT == "" ]]; then
 	rescan_project
 	exit_show_tool_tip
 fi
-echo $THEOUTPUT
+echo "$THEOUTPUT"
 exit_show_html
 </string>
 	<key>input</key>

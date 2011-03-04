@@ -8,11 +8,10 @@
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 THEOUTPUT=$("$TM_BUNDLE_PATH/test/bash.php" foo)
-echo $THEOUTPUT
 if [[ $THEOUTPUT == "testing2" ]]; then
 	exit_create_new_document
 fi
-
+echo $THEOUTPUT
 exit_show_tool_tip
 </string>
 	<key>input</key>
