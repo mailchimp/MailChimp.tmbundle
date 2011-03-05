@@ -7,12 +7,12 @@
 	<key>command</key>
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
-"$TM_BUNDLE_SUPPORT/runner.php" campaign merge_vars
+"$TM_BUNDLE_SUPPORT/runner.php" helper merge_tags
 </string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Campaign: List Merge Tag</string>
+	<string>Helper: MC Merge Tags</string>
 	<key>output</key>
 	<string>afterSelectedText</string>
 	<key>scope</key>
@@ -20,6 +20,6 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>tabTrigger</key>
 	<string>*</string>
 	<key>uuid</key>
-	<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
+	<string>1A990D67-F06B-4D62-842C-0D768AE9EA49</string>
 </dict>
 </plist>

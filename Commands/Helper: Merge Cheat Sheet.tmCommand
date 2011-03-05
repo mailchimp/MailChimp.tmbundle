@@ -6,20 +6,16 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env bash
-source "$TM_SUPPORT_PATH/lib/bash_init.sh"
-"$TM_BUNDLE_SUPPORT/runner.php" campaign merge_vars
-</string>
+echo $(curl -s "http://kb.mailchimp.com/article/getting-started-with-merge-tags")</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: List Merge Tag</string>
+	<string>Helper: Merge Cheat Sheet</string>
 	<key>output</key>
-	<string>afterSelectedText</string>
-	<key>scope</key>
-	<string>source.html, text.plain</string>
-	<key>tabTrigger</key>
-	<string>*</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
-	<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
+	<string>E0445174-4E3C-4818-9D80-34680033BDF5</string>
 </dict>
 </plist>
