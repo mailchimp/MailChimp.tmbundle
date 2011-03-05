@@ -4,6 +4,8 @@
 <dict>
 	<key>mainMenu</key>
 	<dict>
+		<key>excludedItems</key>
+		<array/>
 		<key>items</key>
 		<array>
 			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>

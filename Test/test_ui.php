@@ -2,10 +2,10 @@
 include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'head.php';
 
 // UI TEST / EXAMPLE
-// $UI = new UI(getenv('DIALOG'));
+$UI = new UI(getenv('DIALOG'));
 // $UI_TWO = new UI(getenv('DIALOG_1'));
 
-// $UI->help();
+$UI->help();
 // $UI_TWO->help();
 
 
