@@ -2,10 +2,11 @@
 include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'head.php';
 
 // UI TEST / EXAMPLE
-$UI = new UI(getenv('DIALOG'));
+// $UI = new UI(getenv('DIALOG'));
 // $UI_TWO = new UI(getenv('DIALOG_1'));
 
 // $UI->help();
+// $UI_TWO->help();
 
 
 // Simple Message
@@ -31,4 +32,4 @@ $UI = new UI(getenv('DIALOG'));
 // var_dump($response);
 
 // $UI->popup(array('foo','bar', 'long title'));
-$UI->popup_x(array('foo','bar', 'long title'));
+// $UI->popup_x(array('foo','bar', 'long title'));
