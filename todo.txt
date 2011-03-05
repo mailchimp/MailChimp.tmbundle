@@ -11,5 +11,4 @@ potential features
 * locale
 * campaignSendTest - trigger a send test to email addy. of course, would need to throw email addy into the config
 * campaignReplicate could be cool
-* make a switch function based on apikeys? http://apidocs.mailchimp.com/1.3/apikeys.func.php
 * update bundle - if user has git, and checked out a verion, update the bundle, preservig their changes - like get bundles, but independant - should be compatible.
