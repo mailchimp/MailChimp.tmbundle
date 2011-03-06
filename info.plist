@@ -50,6 +50,16 @@
 				<key>name</key>
 				<string>Macros Example</string>
 			</dict>
+			<key>CA0CA4B6-5673-4837-B432-395F48B9516D</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>24CB4E3C-AAAB-4F92-9379-BBA3D7A558F0</string>
+					<string>315E02C0-9204-4DDF-BEF1-A68A363BC7D9</string>
+				</array>
+				<key>name</key>
+				<string>Editable</string>
+			</dict>
 			<key>F0118E02-401A-406E-8D6D-5A0D85D26F2F</key>
 			<dict>
 				<key>items</key>
@@ -58,6 +68,7 @@
 					<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
 					<string>AC8D6A7A-F37A-4D57-9240-C6D16B1FD280</string>
 					<string>71FE5E76-62E8-4905-8A11-BDA3400A88AE</string>
+					<string>CA0CA4B6-5673-4837-B432-395F48B9516D</string>
 				</array>
 				<key>name</key>
 				<string>Templates</string>

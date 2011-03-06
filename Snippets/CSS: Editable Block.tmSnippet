@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/**
+* @tab ${2:Page}
+* @section ${3:main heading}
+* @tip ${4:tip}
+* @style ${5:style}
+*/
+${1:selector} {
+  /*@editable*/ ${6:property}: ${7:value};$0
+}
+</string>
+	<key>name</key>
+	<string>CSS Block</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>mc</string>
+	<key>uuid</key>
+	<string>24CB4E3C-AAAB-4F92-9379-BBA3D7A558F0</string>
+</dict>
+</plist>
