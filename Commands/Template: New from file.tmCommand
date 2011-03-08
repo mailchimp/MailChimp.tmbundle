@@ -6,24 +6,26 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env bash
-
-res=$(CocoaDialog inputbox --title "I Need Input" \
-    --informative-text "Please give me a string:" \
-    --button1 "Okay" --button2 "Cancel")
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+res=$(CocoaDialog inputbox --title "Template Name" \
+    --informative-text "Creating a new template from the current file." \
+    --button1 "Yes!!!" --button2 "Cancel")
 
 [[ $(head -n1 &lt;&lt;&lt;"$res") == "2" ]] &amp;&amp; exit_discard
 
 res=$(tail -n1 &lt;&lt;&lt;"$res")
 
-echo "You entered: $res"
+"$TM_BUNDLE_SUPPORT/runner.php" template new "$res"
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^@</string>
 	<key>name</key>
-	<string>Test: Input</string>
+	<string>Template: New from file</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>showAsTooltip</string>
 	<key>uuid</key>
-	<string>0A5A5604-A074-44E7-9D60-ECAEED86521B</string>
+	<string>51515F73-E28F-460C-8B0D-F55B90C1664D</string>
 </dict>
 </plist>

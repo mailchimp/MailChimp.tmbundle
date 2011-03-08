@@ -1,11 +1,11 @@
 <?php 
-include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'head.php';
-
+// include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'head.php';
+//echo getenv('TM_SUPPORT_PATH');
 // UI TEST / EXAMPLE
 $UI = new UI(getenv('DIALOG'));
 // $UI_TWO = new UI(getenv('DIALOG_1'));
 
-$UI->help();
+$UI->help('defaults');
 // $UI_TWO->help();
 
 
@@ -33,3 +33,9 @@ $UI->help();
 
 // $UI->popup(array('foo','bar', 'long title'));
 // $UI->popup_x(array('foo','bar', 'long title'));
+
+// $res = `$(CocoaDialog inputbox --title "I Need Input" \
+//     --informative-text "Please give me a string:" \
+//     --button1 "Okay" --button2 "Cancel")`;
+// 
+// var_dump($res);

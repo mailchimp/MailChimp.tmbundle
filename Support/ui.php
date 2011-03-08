@@ -7,6 +7,11 @@
 * 
 * NIB related code not exactly working - still needs more r&d, but the simpler
 * UI dialogs, menus are working
+*
+* @todo @note
+* Till we can figure out how to encapsulate this with PHP, 
+* we have to get user input using bash script
+* see Template: New
 */
 class UI {
 
