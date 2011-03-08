@@ -12,15 +12,19 @@ res=$(CocoaDialog inputbox --title "Template Name" \
     --button1 "Yes!!!" --button2 "Cancel")
 
 [[ $(head -n1 &lt;&lt;&lt;"$res") == "2" ]] &amp;&amp; exit_discard
-echo "$res"
-#res=$(tail -n1 &lt;&lt;&lt;"$res")
 
-#"$TM_BUNDLE_SUPPORT/runner.php" template new "$res"
+res=$(tail -n1 &lt;&lt;&lt;"$res")
+
+#empty string - basically can't have 1 as a name :)  
+#if its a problem, can check length of res in entirety
+[[ "$res" == "1" ]] &amp;&amp; echo "No empty name allowed" &amp;&amp; exit_show_tool_tip
+
+"$TM_BUNDLE_SUPPORT/runner.php" template new "$res"
 </string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^@</string>
+	<string>^#</string>
 	<key>name</key>
 	<string>Template: New from file</string>
 	<key>output</key>
