@@ -12,10 +12,10 @@ res=$(CocoaDialog inputbox --title "Template Name" \
     --button1 "Yes!!!" --button2 "Cancel")
 
 [[ $(head -n1 &lt;&lt;&lt;"$res") == "2" ]] &amp;&amp; exit_discard
+echo "$res"
+#res=$(tail -n1 &lt;&lt;&lt;"$res")
 
-res=$(tail -n1 &lt;&lt;&lt;"$res")
-
-"$TM_BUNDLE_SUPPORT/runner.php" template new "$res"
+#"$TM_BUNDLE_SUPPORT/runner.php" template new "$res"
 </string>
 	<key>input</key>
 	<string>none</string>
