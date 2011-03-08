@@ -40,7 +40,7 @@ Commands
               one to load a user template/ set the template_id for the current project, and one just to suck in a 
               gallery or base template as a starting point without setting the template ID
   * x Upload: Will upload your USER template that you are currently working on. 
-
+  * x Open In MailChimp: Goto the Edit page for this template on mailchimp site.
 
 * Helpers (transformers, previews)
   * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
