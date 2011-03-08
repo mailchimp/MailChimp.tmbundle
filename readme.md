@@ -33,7 +33,7 @@ Commands
   
 * Templates
   * x Preview From MC: Rendered version of the Source (on MC) from our popup preview. Allows you to look at User/Gallery/Base
-  * x Source: Browse and Pull down the source for a template.   
+  * x Select: Browse and Pull down the source for a template.   
               Sets the Template ID in mc.ini  
               Currently allows User/Gallery/Base. This will change to match workflow a bit more 
               ie: you can only Upload your User templates, so it might make sense to split this into 2 distinct functions
@@ -41,7 +41,9 @@ Commands
               gallery or base template as a starting point without setting the template ID
   * x Upload: Will upload your USER template that you are currently working on. 
   * x Open In MailChimp: Goto the Edit page for this template on mailchimp site.
-
+  * x New from file: Will ask for a name, and save the current file as a new template with that name, 
+                     and switch you to the new template.
+  
 * Helpers (transformers, previews)
   * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
   * x inlinecss : Will take the document you are working on, pass it through MailChimp's inlineCSSer, and replace the text. You can actually work in steps with this, writing just the styles you need, and then triggering. to build up the inline. (make video to make this clearer)
@@ -63,8 +65,6 @@ Campaigns
 Templates
 ---------
 
-(Edit User Templates Only... for now! <dramatic music />!)
-
 * make a new folder for your project. create a file, **mc.ini** inside that folder
 * inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
 * drag folder onto Textmate to make a new project
@@ -72,7 +72,7 @@ Templates
 * Use the `Template: Select`. Then, pick the template you would like to work on. 
 * `Template: Load` Load Template HTML from other templates (User, Base, or Gallery) to use in your project 
 * `Template: Upload` will send the file back to which ever you set in Template: Select
-
+* `Template: New` create a new template from the current file, and switch over
 Things you should know
 ----------------------
 
