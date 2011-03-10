@@ -7,9 +7,15 @@ $UI = new UI(getenv('DIALOG'));
 
 // $UI->help();
 
-array('id'=>'title');
+// Example: Using Request Item
+$items = array('id'=>'title', 'id2'=>'title2');
+$response = $UI->requestItem(array('items'=>$items));
 
-$UI->requestItem();
+$xml = new SimpleXMLElement($response);
+//@todo more error checking/buttons
+$selection = (string)$xml->dict->dict->array->string;
+echo("You chose: ".$selection);
+
 // $UI->nib_list_clean();
 // $UI_TWO->help();
 

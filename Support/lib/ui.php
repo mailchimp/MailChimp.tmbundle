@@ -162,11 +162,7 @@ class UI {
         $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
-
-
-        
-        var_dump($result);
-        
+        return $result;
         
     }
     
