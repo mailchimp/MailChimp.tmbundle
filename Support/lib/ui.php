@@ -162,7 +162,11 @@ class UI {
         // $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
-        return $result;
+        
+        $xml = new SimpleXMLElement($result);
+        //@todo more error checking/buttons
+        $selection = (string)$xml->dict->dict->array->string;
+        return $selection;
     }
     
     /**
