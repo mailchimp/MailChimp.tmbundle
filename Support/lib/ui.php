@@ -158,7 +158,7 @@ class UI {
      * @return void
      **/
     public function requestItem($options = array()) {
-        $plist = $this->plist_create(array('title'=>'option title'));
+        $plist = $this->plist_create($options);
         // $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
@@ -190,8 +190,8 @@ class UI {
 
         $buttons = array();
         foreach ($options['buttons'] as $index =>$button) {
-            
-            $buttons[] = "<key>button"+(1+$index)+"</key><string>{$button}</string>";
+            $index = 1+$index;
+            $buttons[] = "<key>button{$index}</key>\n<string>{$button}</string>";
         }
         $buttons = implode("\n", $buttons);
         
@@ -215,15 +215,13 @@ $pTemplate = <<<HTML
 </plist>
 HTML;
 
-    $output = str_replace(array('{title}','{prompt}','{items}', '{buttons}'), array($options['title'], $options['prompt'],$items, $buttons), $pTemplate);
-    // var_dump($output);
-    return $output;
-// <key>button1</key>
-// <string>OK</string>
-// <key>button2</key>
-// <string>Cancel</string>
-
+    $output = str_replace(
+        array('{title}','{prompt}','{items}', '{buttons}'), 
+        array($options['title'], $options['prompt'],$items, $buttons), 
+        $pTemplate);
         
+    return $output;
+
     }
     
 }
