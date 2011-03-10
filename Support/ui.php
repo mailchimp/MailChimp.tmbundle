@@ -154,25 +154,31 @@ class UI {
      * write custom one? basically, xml, but needs to have things like linebreaks converted. 
      * can maybe pass through TM libs? or can just make a simple template and drop the info in?
      * tbd - needs some more experimentation
-     *
+     * @require Escape class
      * @return void
      **/
     public function requestItem($options = array()) {
 
-        //$plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../plist_shell_ready.txt');
         $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
-        $plist = preg_replace('/(?=[^a-zA-Z0-9_.\/\-\x7F-\xFF\n])/', '\\', $plist);
-        $plist = str_replace("\n", "'\n'", $plist);
-
-        // echo $plist;
-        // die();
-
-        $tmsupportpath = getenv('TM_SUPPORT_PATH');
+        $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
+
+
         
         var_dump($result);
         
         
+    }
+    
+    /**
+     * Take in plist 
+     *
+     * @return void
+     **/
+    public function escape_plist($xml) {
+        $plist = preg_replace('/(?=[^a-zA-Z0-9_.\/\-\x7F-\xFF\n])/', '\\', $xml);
+        $plist = str_replace("\n", "'\n'", $plist);
+        return $plist;
     }
 
 
