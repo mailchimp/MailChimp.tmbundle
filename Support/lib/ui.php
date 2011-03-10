@@ -165,17 +165,4 @@ class UI {
         return $result;
         
     }
-    
-    /**
-     * Take in plist 
-     *
-     * @return void
-     **/
-    public function escape_plist($xml) {
-        $plist = preg_replace('/(?=[^a-zA-Z0-9_.\/\-\x7F-\xFF\n])/', '\\', $xml);
-        $plist = str_replace("\n", "'\n'", $plist);
-        return $plist;
-    }
-
-
 }
