@@ -158,11 +158,72 @@ class UI {
      * @return void
      **/
     public function requestItem($options = array()) {
-
-        $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
+        $plist = $this->plist_create(array('title'=>'option title'));
+        // $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
         return $result;
+    }
+    
+    /**
+     * Used to generate the plist required by requestItem. 
+     * Swap out with more robust solution if needed.
+     *
+     * @return string
+     **/
+    public function plist_create($options = array()) {
+        
+        $default = array(
+            'title' => 'Default Title yes?',
+            'prompt' => 'Choose!',
+            'items' => array(),
+            'buttons' => array('Ok', 'Cancel') //Up to 3!
+        );
+        
+        $options = $options + $default;
+
+        $items = array();
+        foreach ($options['items'] as $item) {
+            $items[] = "<string>{$item}</string>";
+        }
+        $items = implode("\n", $items);
+
+        $buttons = array();
+        foreach ($options['buttons'] as $index =>$button) {
+            
+            $buttons[] = "<key>button"+(1+$index)+"</key><string>{$button}</string>";
+        }
+        $buttons = implode("\n", $buttons);
+        
+$pTemplate = <<<HTML
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    {buttons}
+	<key>items</key>
+	<array>
+        {items}
+	</array>
+	<key>prompt</key>
+	<string>{prompt}</string>
+	<key>string</key>
+	<string></string>
+	<key>title</key>
+	<string>{title}</string>
+</dict>
+</plist>
+HTML;
+
+    $output = str_replace(array('{title}','{prompt}','{items}', '{buttons}'), array($options['title'], $options['prompt'],$items, $buttons), $pTemplate);
+    // var_dump($output);
+    return $output;
+// <key>button1</key>
+// <string>OK</string>
+// <key>button2</key>
+// <string>Cancel</string>
+
         
     }
+    
 }
