@@ -7,6 +7,8 @@ $UI = new UI(getenv('DIALOG'));
 
 // $UI->help();
 
+array('id'=>'title');
+
 $UI->requestItem();
 // $UI->nib_list_clean();
 // $UI_TWO->help();
