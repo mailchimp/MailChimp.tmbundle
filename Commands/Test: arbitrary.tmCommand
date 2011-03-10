@@ -5,12 +5,24 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env php
-&lt;?php
-include getenv('TM_BUNDLE_PATH').DIRECTORY_SEPARATOR.'Test'.DIRECTORY_SEPARATOR.'test_arb.php';
-</string>
+	<string>options='{"red", "green", "blue"}'
+
+res=$(osascript &lt;&lt;'AS'
+    tell app "TextMate"
+        activate
+        choose from list $options \
+            with title "Pick a Color" \
+            with prompt "What color do you like?"
+    end tell
+AS)
+
+echo "You selected: $res"
+
+osascript -e 'tell app "TextMate" to activate' &amp;&gt;/dev/null &amp;</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^@</string>
 	<key>name</key>
 	<string>Test: arbitrary</string>
 	<key>output</key>

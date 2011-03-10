@@ -5,7 +5,10 @@
 $UI = new UI(getenv('DIALOG'));
 // $UI_TWO = new UI(getenv('DIALOG_1'));
 
-$UI->help('defaults');
+// $UI->help();
+
+$UI->requestItem();
+// $UI->nib_list_clean();
 // $UI_TWO->help();
 
 

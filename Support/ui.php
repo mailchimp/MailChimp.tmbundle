@@ -139,21 +139,35 @@ class UI {
     }
 
     /**
-     * undocumented function
+     * requestItem
+     *
+     * Wrapper for the modal select item dialog.
+     *
+     * notes:
+     *
+     * In textmate shared support/ lib/ ui.rb
+     * can write out example of plist
+     * File.open("/Users/mitch/plist.txt", 'w') {|f| f.write(params.to_plist) }
+     * File.open("/Users/mitch/plist2.txt", 'w') {|f| f.write(e_sh params.to_plist) }
+     *
+     * So, next step, to figure out how to generate plist via php. maybe 
+     * write custom one? basically, xml, but needs to have things like linebreaks converted. 
+     * can maybe pass through TM libs? or can just make a simple template and drop the info in?
+     * tbd - needs some more experimentation
      *
      * @return void
      **/
     public function requestItem() {
 
-        $nibtoken = `{$this->dialog} nib --load "RequestItem" --model '{title = "Campaigns"; prompt = "Please select your campign:"; items=("foo","bar","baz"); }'`;
+        $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../plist_shell_ready.txt');
+// //         $plist = escapeshellcmd($plist);
+// // echo $plist;
+// die()
+        $tmsupportpath = getenv('TM_SUPPORT_PATH');
+        $nibtoken = `{$this->dialog} -cmp {$plist} "RequestItem"`;
 
-        $output = array();
-        exec("{$this->dialog} nib --wait {$nibtoken} | wc &", $output);
-        var_dump($output);
-        // var_dump($nibtoken);
-        // $response = `{$this->dialog} nib --dispose {$nibtoken}`;
-        // var_dump($response);
-     
+        var_dump($nibtoken);
+        
         
     }
 
