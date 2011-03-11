@@ -11,6 +11,10 @@ res=$(CocoaDialog inputbox --title "I Need Input" \
     --informative-text "Please give me a string:" \
     --button1 "Okay" --button2 "Cancel")
 
+# this is a good example of how to deal with error handling on the bash side
+# first line is the status code
+# second line is the response
+
 [[ $(head -n1 &lt;&lt;&lt;"$res") == "2" ]] &amp;&amp; exit_discard
 
 res=$(tail -n1 &lt;&lt;&lt;"$res")
