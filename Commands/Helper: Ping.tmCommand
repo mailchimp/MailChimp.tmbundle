@@ -13,7 +13,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Helper: Ping</string>
+	<string>Helper: Check MailChimp Connection</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>uuid</key>
