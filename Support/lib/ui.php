@@ -148,7 +148,7 @@ class UI {
         $default = array(
             'title' => 'UI - Title',
             'prompt' => 'Prompt Placeholder!',
-            'default' => 'Default Value',
+            'default' => '',
             'buttons' => array('Ok', 'Cancel')
         );
         
