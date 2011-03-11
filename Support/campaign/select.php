@@ -13,21 +13,30 @@ $campaigns = $retval['data'];
 
 //pull out campaign info, prep it for TM 
 $collector = array();
+
+//Array indexed by title. not ideal (would rather id) 
+// but i dont see a way with the requestItem nib how to pass extra data
+// We will encounter problems if campaigns can have the same name :/
+$campHash = array();
 foreach($campaigns as $campaign){
-    $temp = '{title="%s";campaign_id="%s";list_id="%s";}';
-    $collector[] = sprintf($temp, $campaign['title'], $campaign['id'], $campaign['list_id']);
+    $campHash[$campaign['title']] = array(
+        'title'=>$campaign['title'],
+        'list_id' => $campaign['list_id'],
+        'campaign_id' => $campaign['id']
+    );
 }
 
-$response = $UI->menu($collector);
+$response = $UI->requestItem(array(
+    'items'=>array_keys($campHash),
+    'title' => 'MailChimp: Select Campaign',
+    'prompt' => 'Choose a Campaign to switch to.'
+));
 
 if(empty($response)) {
     exit( 'Cancelled.');
 }
 
-//@todo refactor this - some helper method to extract value/keys??
-$xml = new SimpleXMLElement($response);
-
-$config->campaign_id = $tool->getValue($xml, 'campaign_id');
-$config->list_id = $tool->getValue($xml, 'list_id');
+$config->campaign_id = $campHash[$response]['campaign_id'];
+$config->list_id = $campHash[$response]['list_id'];
 
 $config->save();
