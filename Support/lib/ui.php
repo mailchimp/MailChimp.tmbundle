@@ -141,9 +141,11 @@ class UI {
     /**
      * Present user with a input dialog
      *
+     * @param array $options title, prompt, default, buttons
+     * @param bool $secure Use the password style input or regular.
      * @return string
      **/
-    public function input($options = array()) {
+    public function input($options = array(), $secure = false) {
         //
         $default = array(
             'title' => 'UI - Title',
@@ -157,7 +159,8 @@ class UI {
         $plist = Escape::sh($this->plistCreate($options));
         
         // Can repurp for secure input as well.
-        $result = `{$this->dialog} -cmp {$plist} "RequestString"`;
+        $nibType = (false == $secure) ? 'RequestString' : 'RequestSecureString';
+        $result = `{$this->dialog} -cmp {$plist} "{$nibType}"`;
 
         //@todo see if we can remove duping of stuff between input and requestItems
         $xml = new SimpleXMLElement($result);
