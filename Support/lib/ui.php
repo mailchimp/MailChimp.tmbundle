@@ -163,7 +163,7 @@ class UI {
         $xml = new SimpleXMLElement($result);
         $selection = '';
         if(property_exists($xml->dict, 'dict')) {
-            $selection = (string)$xml->dict->dict->array->string;
+            $selection = (string)$xml->dict->dict->string;
         }
         return $selection;
     }
