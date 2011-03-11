@@ -19,3 +19,23 @@ switch campaign to the html mode
 
 * need a way to force campaignUpdate to recognize html evenif campaign was a template before. 
 * otherwise, forced to work with template.
+
+
+
+-----------
+
+On Commands / error checking
+
+See how it handles the return values to check if exit_discard
+
+res=$(CocoaDialog inputbox --title "Template Name" \
+    --informative-text "Creating a new template from the current file." \
+    --button1 "Yes!!!" --button2 "Cancel")
+
+[[ $(head -n1 <<<"$res") == "2" ]] && exit_discard
+
+res=$(tail -n1 <<<"$res")
+
+#empty string - basically can't have 1 as a name :)  
+#if its a problem, can check length of res in entirety
+[[ "$res" == "1" ]] && echo "No empty name allowed" && exit_show_tool_tip

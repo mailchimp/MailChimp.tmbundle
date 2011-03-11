@@ -7,19 +7,7 @@
 	<key>command</key>
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
-res=$(CocoaDialog inputbox --title "Template Name" \
-    --informative-text "Creating a new template from the current file." \
-    --button1 "Yes!!!" --button2 "Cancel")
-
-[[ $(head -n1 &lt;&lt;&lt;"$res") == "2" ]] &amp;&amp; exit_discard
-
-res=$(tail -n1 &lt;&lt;&lt;"$res")
-
-#empty string - basically can't have 1 as a name :)  
-#if its a problem, can check length of res in entirety
-[[ "$res" == "1" ]] &amp;&amp; echo "No empty name allowed" &amp;&amp; exit_show_tool_tip
-
-"$TM_BUNDLE_SUPPORT/runner.php" template new "$res"
+"$TM_BUNDLE_SUPPORT/runner.php" template new
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -28,7 +16,7 @@ res=$(tail -n1 &lt;&lt;&lt;"$res")
 	<key>name</key>
 	<string>Template: New from file</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>51515F73-E28F-460C-8B0D-F55B90C1664D</string>
 </dict>
