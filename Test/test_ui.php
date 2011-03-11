@@ -14,17 +14,9 @@ $UI = new UI(getenv('DIALOG'));
 ////////////////////
 
 // Using Request Input
-$user_input = $UI->input();
+$user_input = $UI->input(array('title'=>'Title Here', 'prompt'=> 'Prompt User!', 'default'=>''));
 echo("You entered: ".$user_input);
-
-
-// $xml = new SimpleXMLElement($response);
-// //@todo more error checking/buttons
-// $selection = (string)$xml->dict->dict->array->string;
-// echo("You chose: ".$selection);
-
-// $UI->nib_list_clean();
-// $UI_TWO->help();
+//////////////////////
 
 
 // Simple Message
