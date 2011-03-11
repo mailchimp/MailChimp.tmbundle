@@ -137,6 +137,38 @@ class UI {
         // var_dump($response);
     }
 
+
+    /**
+     * Present user with a input dialog
+     *
+     * @return string
+     **/
+    public function input($options = array()) {
+        //
+        $default = array(
+            'title' => 'UI - Title',
+            'prompt' => 'Prompt Placeholder!',
+            'default' => 'Default Value',
+            'buttons' => array('Ok', 'Cancel')
+        );
+        
+        $options = $options + $default;
+
+        $plist = Escape::sh($this->plistCreate($options));
+        
+        // Can repurp for secure input as well.
+        $result = `{$this->dialog} -cmp {$plist} "RequestString"`;
+
+        //@todo see if we can remove duping of stuff between input and requestItems
+        $xml = new SimpleXMLElement($result);
+        $selection = '';
+        if(property_exists($xml->dict, 'dict')) {
+            $selection = (string)$xml->dict->dict->array->string;
+        }
+        return $selection;
+    }
+
+
     /**
      * requestItem
      *
@@ -186,10 +218,14 @@ class UI {
     
     
     /**
-     * Used to generate the plist required by requestItem. 
-     * Swap out with more robust solution if needed :/
+     * Used to generate the plist required by the nib stuff
+     *.The TM/ui.rb seems to rely on OSX::PropertyList which is a bundle found
+     * here:ENV['TM_SUPPORT_PATH'] + '/lib/osx/plist'
+     * However, OSX::PropertyList seems to be a ruby thing, so not sure 
+     * if can even use the bundle in php. From what I see, 
+     * it looks like python has its own writer - it doesnt use OSX:: either
      *
-     * @param array of the options to present users
+     * @param array of the options for the plist
      * @return string
      **/
     public function plistCreate($options = array()) {

@@ -8,9 +8,15 @@ $UI = new UI(getenv('DIALOG'));
 // $UI->help();
 
 // Example: Using Request Item
-$items = array('id'=>'title', 'id2'=>'title2');
-$selection = $UI->requestItem(array('items'=>$items));
-echo("You chose: ".$selection);
+// $items = array('id'=>'title', 'id2'=>'title2');
+// $selection = $UI->requestItem(array('items'=>$items));
+// echo("You chose: ".$selection);
+////////////////////
+
+// Using Request Input
+$user_input = $UI->input();
+echo("You entered: ".$user_input);
+
 
 // $xml = new SimpleXMLElement($response);
 // //@todo more error checking/buttons
