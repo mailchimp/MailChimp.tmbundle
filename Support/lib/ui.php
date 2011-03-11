@@ -4,9 +4,8 @@
 * UI
 *
 * UI Layer to call up TM alerts, dialogs
-* 
-* NIB related code not exactly working - still needs more r&d, but the simpler
-* UI dialogs, menus are working
+*
+* port of ui.rb stuff that comes with TM
 *
 * @todo @note
 * Till we can figure out how to encapsulate this with PHP, 
@@ -154,11 +153,23 @@ class UI {
      * write custom one? basically, xml, but needs to have things like linebreaks converted. 
      * can maybe pass through TM libs? or can just make a simple template and drop the info in?
      * tbd - needs some more experimentation
-     * @require Escape class
-     * @return void
+     *
+     * @requires Escape class
+     * @param array $options Options for the request dialog. title, prompt, items (array), buttons (array)
+     * @return string
      **/
     public function requestItem($options = array()) {
-        $plist = $this->plist_create($options);
+
+        $default = array(
+            'title' => 'Select an item',
+            'prompt' => 'Choose well!',
+            'items' => array(),
+            'buttons' => array('Ok', 'Cancel') //Up to 3!
+        );
+        
+        $options = $options + $default;
+
+        $plist = $this->plistCreate($options);
         // $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
@@ -169,28 +180,28 @@ class UI {
         return $selection;
     }
     
+    
     /**
      * Used to generate the plist required by requestItem. 
-     * Swap out with more robust solution if needed.
+     * Swap out with more robust solution if needed :/
      *
+     * @param array of the options to present users
      * @return string
      **/
-    public function plist_create($options = array()) {
-        
-        $default = array(
-            'title' => 'Default Title yes?',
-            'prompt' => 'Choose!',
-            'items' => array(),
-            'buttons' => array('Ok', 'Cancel') //Up to 3!
-        );
-        
-        $options = $options + $default;
+    public function plistCreate($options = array()) {
 
-        $items = array();
-        foreach ($options['items'] as $item) {
-            $items[] = "<string>{$item}</string>";
+        $items = '';
+        
+        if(!empty($options['items'])) {
+            $items .= "<key>items</key>\n";
+        	
+            $collector = array();
+            foreach ($options['items'] as $item) {
+                $collector[] = "<string>{$item}</string>";
+            }
+            
+            $items .= '<array>'.implode("\n", $collector)."</array>\n";
         }
-        $items = implode("\n", $items);
 
         $buttons = array();
         foreach ($options['buttons'] as $index =>$button) {
@@ -205,10 +216,7 @@ $pTemplate = <<<HTML
 <plist version="1.0">
 <dict>
     {buttons}
-	<key>items</key>
-	<array>
-        {items}
-	</array>
+    {items}
 	<key>prompt</key>
 	<string>{prompt}</string>
 	<key>string</key>
