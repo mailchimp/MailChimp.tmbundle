@@ -6,8 +6,6 @@ o-o-a-a.
 
 Initial list of functionality we are looking to implement, plus some related notes.
 
-Focus is on Campaigns initially, then fill in template stuff after
-
 (x is rough done)
 
 Commands
@@ -73,6 +71,7 @@ Templates
 * `Template: Load` Load Template HTML from other templates (User, Base, or Gallery) to use in your project 
 * `Template: Upload` will send the file back to which ever you set in Template: Select
 * `Template: New` create a new template from the current file, and switch over
+
 Things you should know
 ----------------------
 
@@ -93,7 +92,6 @@ End User Docs Notes
 -------------------
 
 * Stress this bundle will NOT protect you from yourself. Make sure to use some form of version control. git, hg, bzr, svn
-
 
 Targets
 -------
