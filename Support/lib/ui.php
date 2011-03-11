@@ -170,9 +170,10 @@ class UI {
         $options = $options + $default;
 
         $plist = $this->plistCreate($options);
-        // $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
+        
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
+
         $xml = new SimpleXMLElement($result);
 
         //@todo more error checking/buttons
@@ -213,6 +214,11 @@ class UI {
         }
         $buttons = implode("\n", $buttons);
         
+        $default_value = '';
+        if(isset($options['default'])) {
+            $default_value = $options['default'];
+        }
+        
 $pTemplate = <<<HTML
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -223,7 +229,7 @@ $pTemplate = <<<HTML
 	<key>prompt</key>
 	<string>{prompt}</string>
 	<key>string</key>
-	<string></string>
+	<string>{default}</string>
 	<key>title</key>
 	<string>{title}</string>
 </dict>
@@ -231,8 +237,8 @@ $pTemplate = <<<HTML
 HTML;
 
         $output = str_replace(
-            array('{title}','{prompt}','{items}', '{buttons}'), 
-            array($options['title'], $options['prompt'],$items, $buttons), 
+            array('{title}','{prompt}','{items}', '{buttons}', '{default}'), 
+            array($options['title'], $options['prompt'],$items, $buttons, $default_value), 
             $pTemplate);
         
         return $output;
