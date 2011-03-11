@@ -173,10 +173,13 @@ class UI {
         // $plist = file_get_contents(getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'../Test/plist.txt');
         $plist = Escape::sh($plist);
         $result = `{$this->dialog} -cmp {$plist} "RequestItem"`;
-        
         $xml = new SimpleXMLElement($result);
+
         //@todo more error checking/buttons
-        $selection = (string)$xml->dict->dict->array->string;
+        $selection = '';
+        if(property_exists($xml->dict, 'dict')) {
+            $selection = (string)$xml->dict->dict->array->string;
+        }
         return $selection;
     }
     
@@ -227,12 +230,12 @@ $pTemplate = <<<HTML
 </plist>
 HTML;
 
-    $output = str_replace(
-        array('{title}','{prompt}','{items}', '{buttons}'), 
-        array($options['title'], $options['prompt'],$items, $buttons), 
-        $pTemplate);
+        $output = str_replace(
+            array('{title}','{prompt}','{items}', '{buttons}'), 
+            array($options['title'], $options['prompt'],$items, $buttons), 
+            $pTemplate);
         
-    return $output;
+        return $output;
 
     }
     
