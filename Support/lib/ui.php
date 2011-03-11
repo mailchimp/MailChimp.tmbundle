@@ -67,6 +67,7 @@ class UI {
         return $response;
     }
 
+
     /**
      * Generate a popup menu 
      * Can specify what it inserts. Otherwise, not sure about the use here. 
@@ -93,48 +94,6 @@ class UI {
         
         // $optstring = '( { display = law; }, { display = laws; insert = "(${1:hello}, ${2:again})"; } )';
         `{$this->dialog} popup --suggestions '{$optstring}'`;
-    }
-    
-
-    //used for deving the nibs - this flushes out all the old NIBs hanging around
-    public function nib_list_clean() {
-        $response = `{$this->dialog} nib --list`;
-
-        var_dump($response);
-
-        $nibs = explode("\n", $response);
-        array_pop($nibs);
-        array_shift($nibs);
-        foreach ($nibs as $id) {
-            $id = explode(' ', $id, 2);
-            `{$this->dialog} nib --dispose {$id[0]}`;
-        }
-    }
-
-
-    /**
-     * Load a NIB
-     *
-     * @return void
-     **/
-    public function nib() {
-        // $response = `{$this->dialog} nib --list`;
-        // $nibpath = getenv('TM_SUPPORT_PATH') . DIRECTORY_SEPARATOR . 'nibs' . DIRECTORY_SEPARATOR . 'RequestItem.nib';
-        // var_dump("{$this->dialog} nib --load '{$nibpath}'");
-
-        $nibtoken = `{$this->dialog} nib --load "RequestItem" --model '{title = "Campaigns"; prompt = "Please select your campign:"; items=("foo","bar","baz"); }'`;
-        // $response = `{$this->dialog} nib --update {$nibtoken} --model '{title = "Camp2"; prompt = "Please select your campign2:"; items=("foo","bar","baz"); }'`;
-        // var_dump($response);
-
-        //Ok, this sorta works. so now the question - how to pipe this to another php command,
-        //which can 
-        // a) get the response the user clicked
-        // b) close the window
-        $response = `{$this->dialog} nib --wait {$nibtoken} &> /Users/mitch/src/test.txt &`;
-        var_dump($response);
-        // var_dump($nibtoken);
-        // $response = `{$this->dialog} nib --dispose {$nibtoken}`;
-        // var_dump($response);
     }
 
 

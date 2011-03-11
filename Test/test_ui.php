@@ -14,6 +14,11 @@ $UI = new UI(getenv('DIALOG'));
 ////////////////////
 
 // Using Request Input
+$user_input = $UI->input(array('title'=>'Title Here', 'prompt'=> 'Prompt User!', 'default'=>''));
+echo("You entered: ".$user_input);
+//////////////////////
+
+// Using Password Style input
 $user_input = $UI->input(array('title'=>'Title Here', 'prompt'=> 'Prompt User!', 'default'=>''), true);
 echo("You entered: ".$user_input);
 //////////////////////
