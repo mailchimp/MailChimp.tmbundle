@@ -1,11 +1,14 @@
 <?php
+// Customized on per project basis
 //Some project specific defines
 define('HTML_NAME', 'html.html');
 define('TEXT_NAME', 'text.txt');
-define('CONFIG_FILE_PATH', getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'mc.ini');
+define('CONFIG_FILE_PATH', getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'.mc.ini');
 
 // Used for the tgz-ing up of the files for upload. Tells the tar command what files to exclude.
 define('TAR_EXCLUSION_LIST', getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR . 'tar_exclusion_list.txt');
+
+define('API_KEY_REGEX', '/^([A-Za-z0-9]{32})[-]([A-Za-z0-9]{3})$/');
 
 /**
 * mConfig
@@ -33,17 +36,41 @@ class mConfig {
     var $template_id = null;
     
     function __construct($path) {
-
-        if(!file_exists($path)) {
+        $this->ini_path = $path;
+        
+        if(!file_exists($this->ini_path)) {
+            $this->init();
             trigger_error("Missing config file: {$path}", E_USER_ERROR);
             exit();
         }
-        
-        $this->ini_path = $path;
+
         $this->load();
     }
     
-    
+
+    /**
+     * Set up the init for the project
+     * Since each project 
+     * @return void
+     **/
+    public function init() {
+        //prompt
+        $UI = new UI(getenv('DIALOG'));
+        
+        $response = $UI->input(array('title'=>'Init Project', 'prompt'=>'Please enter your full API Key'));
+        
+        //regex to check apikey?
+        if(0 === preg_match(API_KEY_REGEX, $response)) {
+            echo "You need an API Key to proceed.";
+            exit();
+        }
+        
+        $this->api_key = $response;
+        
+        $this->save();
+        
+    }
+
     /**
      * Write the .ini back
      *

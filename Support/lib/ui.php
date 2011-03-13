@@ -7,10 +7,7 @@
 *
 * port of ui.rb stuff that comes with TM
 *
-* @todo @note
-* Till we can figure out how to encapsulate this with PHP, 
-* we have to get user input using bash script
-* see Template: New
+* @requires Escape
 */
 class UI {
 

@@ -4,6 +4,7 @@ todo
 * video showing people how to make a macro to combine commmands
 * cache result of listMergeVars for each campaign when switching, + add reload command
 * better exit/error handlign
+* ask steve if api key always 32chars + datacenter code
 
 potential features
 
