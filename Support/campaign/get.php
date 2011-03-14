@@ -8,7 +8,7 @@
 //Get RAW content
 //so, archived view shows what it would look like on the website oi guess ?
 $retval = $api->campaignContent($config->campaign_id, false);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Problem getting.');
+$oopsy->go($api->errorCode, $api->errorMessage, 'error_campaign_get');
 
 $html = $retval['html'];
 $text = $retval['text'];

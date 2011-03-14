@@ -3,7 +3,7 @@
 $UI = new UI(getenv('DIALOG'));
 
 $mergevars = $api->listMergeVars($config->list_id);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Unable to get list merge vars!');
+$oopsy->go($api->errorCode, $api->errorMessage, 'error_merge_vars');
 
 $collector = array();
 foreach ($mergevars as $mvar) {
