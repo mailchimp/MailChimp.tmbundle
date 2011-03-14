@@ -40,8 +40,6 @@ class mConfig {
         
         if(!file_exists($this->ini_path)) {
             $this->init();
-            trigger_error("Missing config file: {$path}", E_USER_ERROR);
-            exit();
         }
 
         $this->load();
@@ -61,7 +59,7 @@ class mConfig {
         
         //regex to check apikey?
         if(0 === preg_match(API_KEY_REGEX, $response)) {
-            echo "You need an API Key to proceed.";
+            echo "You need an API Key to proceed. This doens't look like one.";
             exit();
         }
         

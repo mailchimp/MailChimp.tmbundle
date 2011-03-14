@@ -43,6 +43,7 @@ Commands
                      and switch you to the new template.
   
 * Helpers (transformers, previews)
+  * x Init: Enter your API KEY. This should happen on first use of bundle, so no need to call it explicitly
   * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
   * x inlinecss : Will take the document you are working on, pass it through MailChimp's inlineCSSer, and replace the text. You can actually work in steps with this, writing just the styles you need, and then triggering. to build up the inline. (make video to make this clearer)
   * x ping - make sure chimp is alive!
@@ -50,23 +51,21 @@ Commands
 Getting Started
 ---------------
 
+* make a new folder for your project. Create any file in the folder.
+* Drag the folder onto TextMate to make a new project.
+* Open a file in that project.
+* You can now use the bundle commands
+* On your first use, you'll be prompted for your API Key.
+
 Campaigns
 ---------
 
-* make a new folder for your project. create a file, **mc.ini** inside that folder
-* inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
-* drag folder onto Textmate to make a new project
-* Open a file in the project (mc.ini is fine)
 * Campaign: Select will allow you switch between campaigns
 * Campaign: Get will download the .html + .txt
 
 Templates
 ---------
 
-* make a new folder for your project. create a file, **mc.ini** inside that folder
-* inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
-* drag folder onto Textmate to make a new project
-* add a new file to the project: index.html (actually, can be anything\_you\_want.html)
 * Use the `Template: Select`. Then, pick the template you would like to work on. 
 * `Template: Load` Load Template HTML from other templates (User, Base, or Gallery) to use in your project 
 * `Template: Upload` will send the file back to which ever you set in Template: Select

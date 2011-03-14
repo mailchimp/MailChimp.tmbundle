@@ -21,8 +21,6 @@ echo "You selected: $res"
 osascript -e 'tell app "TextMate" to activate' &amp;&gt;/dev/null &amp;</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^@</string>
 	<key>name</key>
 	<string>Test: arbitrary</string>
 	<key>output</key>
