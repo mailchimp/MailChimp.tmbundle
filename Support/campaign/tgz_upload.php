@@ -21,4 +21,4 @@ exec($tar_cmd);
 $content_to_upload = base64_encode(file_get_contents($tar_file));
 
 $retval = $api->campaignUpdate($config->campaign_id, 'content', array('archive'=>$content_to_upload, 'archive_type'=>'tgz'));
-$oopsy->go($api->errorCode, $api->errorMessage, "Problem uploading {$tar_file}");
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_uploading_tgz').$tar_file);
