@@ -7,7 +7,7 @@ $retval = $api->campaigns(array('campaign_id'=>$config->campaign_id));
 
 if(false == $retval) {
     $err_msg = "";
-    $oopsy->go(999, 'error_get_info');
+    $oopsy->go(999, __('error_get_info'));
 }
 
 $ignoreFields = array('tracking', 'segment_opts', 'segment_text', 'type_opts' );
