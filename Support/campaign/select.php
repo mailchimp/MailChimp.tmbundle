@@ -8,7 +8,7 @@
 $UI = new UI(getenv('DIALOG'));
 
 $retval = $api->campaigns(array('status'=> 'save'));
-$oopsy->go($api->errorCode, $api->errorMessage, 'Unable to get list of Campaign!');
+$oopsy->go($api->errorCode, $api->errorMessage, 'error_select');
 $campaigns = $retval['data'];
 
 //pull out campaign info, prep it for TM 
@@ -28,8 +28,8 @@ foreach($campaigns as $campaign){
 
 $response = $UI->requestItem(array(
     'items'=>array_keys($campHash),
-    'title' => 'MailChimp: Select Campaign',
-    'prompt' => 'Choose a Campaign to switch to.'
+    'title' => __('modal_select_title'),
+    'prompt' => __('modal_select_prompt')
 ));
 
 if(empty($response)) {

@@ -8,6 +8,6 @@
 //Get RAW content
 //so, archived view shows what it would look like on the website oi guess ?
 $retval = $api->campaignContent($config->campaign_id, true);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Problem getting Preview Archive.');
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_preview'));
 
 echo ('html' == $id) ? $retval['html'] : '<pre>'.$retval['text'].'</pre>';

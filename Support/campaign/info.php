@@ -25,5 +25,5 @@ foreach ($retval['data'][0] as $key => $value) {
     $collector[] = sprintf($outputT, $key, $value);
 }
 
-echo '<h2>Campaign Info</h2>';
+echo '<h2>'.__('header_get_info').'</h2>';
 echo implode('', $collector);
