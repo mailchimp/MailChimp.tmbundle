@@ -5,6 +5,9 @@ define('HTML_NAME', 'html.html');
 define('TEXT_NAME', 'text.txt');
 define('CONFIG_FILE_PATH', getenv('TM_PROJECT_DIRECTORY').DIRECTORY_SEPARATOR.'.mc.ini');
 
+// Lang files, right now, jsut english
+define('STRINGS_FILE_PATH', getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'locale'.DIRECTORY_SEPARATOR.'eng.ini');
+
 // Used for the tgz-ing up of the files for upload. Tells the tar command what files to exclude.
 define('TAR_EXCLUSION_LIST', getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR . 'tar_exclusion_list.txt');
 
@@ -48,7 +51,7 @@ class mConfig {
 
     /**
      * Set up the init for the project
-     * Since each project 
+     * Since each project is unique, you'll end up editing this file
      * @return void
      **/
     public function init() {

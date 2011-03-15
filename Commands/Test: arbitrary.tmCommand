@@ -5,26 +5,17 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>options='{"red", "green", "blue"}'
-
-res=$(osascript &lt;&lt;'AS'
-    tell app "TextMate"
-        activate
-        choose from list $options \
-            with title "Pick a Color" \
-            with prompt "What color do you like?"
-    end tell
-AS)
-
-echo "You selected: $res"
-
-osascript -e 'tell app "TextMate" to activate' &amp;&gt;/dev/null &amp;</string>
+	<string>#!/usr/bin/env bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh"
+"$TM_BUNDLE_SUPPORT/runner.php" ../Test test_arb</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^@</string>
 	<key>name</key>
 	<string>Test: arbitrary</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>E981A683-1630-4FF7-A12F-9CB3DED62B06</string>
 </dict>
