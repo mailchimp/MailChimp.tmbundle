@@ -10,6 +10,8 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 "$TM_BUNDLE_SUPPORT/runner.php" helper init</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^#</string>
 	<key>name</key>
 	<string>Helper: Init Project</string>
 	<key>output</key>

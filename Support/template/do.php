@@ -23,7 +23,7 @@ $template_type = $tool->getValue($xml, 'id');
 $template_options[$template_type] = true;
 ////////End Template Type User Choice Selection
 $retval = $api->templates($template_options);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Problem templates do.');
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_template_fetch'));
 
 $templates = $retval[$template_type];
 
@@ -42,6 +42,6 @@ $xml = new SimpleXMLElement($response);
 $template_id = $tool->getValue($xml, 'id');
 
 $template_info = $api->templateInfo($template_id, $template_type);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Problem Template Info');
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_template_info'));
 
 echo $template_info[$id];

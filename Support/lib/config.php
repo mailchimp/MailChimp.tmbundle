@@ -51,18 +51,24 @@ class mConfig {
 
     /**
      * Set up the init for the project
-     * Since each project is unique, you'll end up editing this file
+     * Since each project is unique, you'll end up editing this method.
+     * Could do the whole class/extends, but that's overkill for bundle I'm thinking?
+     * Maybe move this to helper/init - more appropriate, 
+     * and just have this method trigger that script
      * @return void
      **/
     public function init() {
         //prompt
         $UI = new UI(getenv('DIALOG'));
         
-        $response = $UI->input(array('title'=>'Init Project', 'prompt'=>'Please enter your full API Key'));
+        $response = $UI->input(array(
+            'title'=>__('modal_init_project_title'), 
+            'prompt'=>__('modal_init_project_prompt')
+        ));
         
         //regex to check apikey?
         if(0 === preg_match(API_KEY_REGEX, $response)) {
-            echo "You need an API Key to proceed. This doens't look like one.";
+            echo __('error_init_project_no_response');
             exit();
         }
         

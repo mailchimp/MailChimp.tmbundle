@@ -7,13 +7,11 @@
 
 $data = stream_get_contents(STDIN);
 if (! $data){
-    echo "Nothing to work on. You sure you in the right document?";
+    echo __('error_generate_wrong_document');
     exit();
 }
 
 $retval = $api->generateText('html', $data);
-$oopsy->go($api->errorCode, $api->errorMessage, "Problem generating text from html.");
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_generate_text_problem'));
 
 echo $retval;
-
-

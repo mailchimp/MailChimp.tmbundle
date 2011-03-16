@@ -10,8 +10,8 @@ include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'mailchimp'.DIRECTORY_SE
 
 //Start up config + API object. we will need them everywhere.
 
-$config = new mConfig(CONFIG_FILE_PATH);
 $lang = new mLang(STRINGS_FILE_PATH);
+$config = new mConfig(CONFIG_FILE_PATH);
 $api = new MCAPI($config->api_key);
 $oopsy = new ErrorHelper();
 $tool = new mUtil();

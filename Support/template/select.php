@@ -11,7 +11,7 @@ $UI = new UI(getenv('DIALOG'));
 $template_type = 'user';
 $template_options = array('user'=>true,'gallery'=>false,'base'=>false );
 $retval = $api->templates($template_options);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Problem templates select.');
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_template_select_fetch'));
 
 $templates = $retval[$template_type];
 
@@ -35,7 +35,7 @@ $xml = new SimpleXMLElement($response);
 $template_id = $tool->getValue($xml, 'id');
 
 $template_info = $api->templateInfo($template_id, $template_type);
-$oopsy->go($api->errorCode, $api->errorMessage, 'Problem Template Info');
+$oopsy->go($api->errorCode, $api->errorMessage, __('error_template_select_info'));
 
 //Then we should write out the template id 
 $config->template_id = $template_id;
