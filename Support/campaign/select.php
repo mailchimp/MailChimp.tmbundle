@@ -13,10 +13,10 @@ $campaigns = $retval['data'];
 
 //Array indexed by title. not ideal (would rather id) 
 // but i dont see a way with the requestItem nib how to pass extra data
-// We will encounter problems if campaigns can have the same name :/
+// We will encounter problems if campaigns can have the same name :/ - make more intelligent
 $campHash = array();
 foreach($campaigns as $campaign){
-    $campHash[$campaign['title']] = array(
+    $campHash[str_replace("'", "", $campaign['title'])] = array(
         'title'=>$campaign['title'],
         'list_id' => $campaign['list_id'],
         'campaign_id' => $campaign['id']
