@@ -11,7 +11,12 @@ $UI = new UI(getenv('DIALOG'));
 //Begin Template Type Selection
 $template_options = array('user'=>false, 'gallery'=>false,'base'=>false );
 
-$template_type = $UI->requestItem(array('items'=>array_keys($template_options)));
+$template_type = $UI->requestItem(array(
+    'items'=>array_keys($template_options),
+    'title'=>__('modal_select_template_type_title'),
+    'prompt'=>__('modal_select_template_type_prompt')
+));
+
 if(empty($template_type)) { exit(); }
 
 $template_options[$template_type] = true;
