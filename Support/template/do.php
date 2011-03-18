@@ -10,16 +10,10 @@ $UI = new UI(getenv('DIALOG'));
 
 //Begin Template Type Selection
 $template_options = array('user'=>false, 'gallery'=>false,'base'=>false );
-$temp_choices = array();
-foreach (array_keys($template_options) as $temp_type) {
-    $temp = '{title="%s";id="%s";}';
-    $temp_choices[] = sprintf($temp, ucfirst($temp_type), $temp_type);
-}
-$response = $UI->menu($temp_choices);
-if(empty($response)) { exit(); }
 
-$xml = new SimpleXMLElement($response);
-$template_type = $tool->getValue($xml, 'id');
+$template_type = $UI->requestItem(array('items'=>array_keys($template_options)));
+if(empty($template_type)) { exit(); }
+
 $template_options[$template_type] = true;
 ////////End Template Type User Choice Selection
 $retval = $api->templates($template_options);
@@ -29,18 +23,22 @@ $templates = $retval[$template_type];
 
 $collector = array();
 foreach($templates as $template){
-    $temp = '{title="%s";id="%s";}';
     $tName = str_replace("'", "", $template['name']);
-    $collector[] = sprintf($temp, $tName, $template['id']);
+    $collector[$tName] = array(
+        'title' => $tName, 
+        'template_id' => $template['id']
+    );
 }
 
-$response = $UI->menu($collector);
+$response = $UI->requestItem(array(
+    'items'=>array_keys($collector),
+    'title' => __('modal_template_select_title'),
+    'prompt' => __('modal_template_select_prompt')
+));
 
 if(empty($response)) { exit(); }
 
-$xml = new SimpleXMLElement($response);
-$template_id = $tool->getValue($xml, 'id');
-
+$template_id = $collector[$response]['template_id'];
 $template_info = $api->templateInfo($template_id, $template_type);
 $oopsy->go($api->errorCode, $api->errorMessage, __('error_template_info'));
 
