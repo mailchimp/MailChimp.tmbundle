@@ -11,9 +11,6 @@ $retval = $api->campaigns(array('status'=> 'save'));
 $oopsy->go($api->errorCode, $api->errorMessage, 'error_select');
 $campaigns = $retval['data'];
 
-//pull out campaign info, prep it for TM 
-$collector = array();
-
 //Array indexed by title. not ideal (would rather id) 
 // but i dont see a way with the requestItem nib how to pass extra data
 // We will encounter problems if campaigns can have the same name :/
