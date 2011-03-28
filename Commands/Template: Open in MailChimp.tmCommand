@@ -13,7 +13,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Template: Open in MailChimp</string>
+	<string>Open Template in MailChimp</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>uuid</key>

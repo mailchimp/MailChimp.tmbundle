@@ -12,7 +12,7 @@ echo $(curl -s "http://kb.mailchimp.com/article/getting-started-with-merge-tags"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Helper: Merge Cheat Sheet</string>
+	<string>Merge Cheat Sheet</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>uuid</key>

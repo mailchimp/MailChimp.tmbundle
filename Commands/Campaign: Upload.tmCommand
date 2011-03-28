@@ -20,7 +20,7 @@ exit_show_html
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Upload HTML or Text</string>
+	<string>Upload HTML or Text Campaign</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>uuid</key>

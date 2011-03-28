@@ -14,7 +14,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Template: New from file</string>
+	<string>New Template from Current File</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>uuid</key>

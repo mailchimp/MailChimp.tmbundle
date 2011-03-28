@@ -20,7 +20,7 @@ exit_show_html
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Template: Upload</string>
+	<string>Upload Current Template</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>uuid</key>

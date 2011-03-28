@@ -12,7 +12,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Campaign: Insert Campaign Merge Tag</string>
+	<string>Insert Campaign Merge Tag</string>
 	<key>output</key>
 	<string>afterSelectedText</string>
 	<key>scope</key>

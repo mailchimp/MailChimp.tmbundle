@@ -19,7 +19,7 @@ echo "$THEOUTPUT"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Template: Choose a Template</string>
+	<string>Choose a Template</string>
 	<key>output</key>
 	<string>replaceDocument</string>
 	<key>uuid</key>

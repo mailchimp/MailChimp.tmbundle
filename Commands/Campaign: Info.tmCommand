@@ -14,7 +14,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Info</string>
+	<string>Get Current Campaign Details</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>uuid</key>

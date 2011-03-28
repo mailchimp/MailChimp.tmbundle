@@ -21,7 +21,7 @@ exit_show_html
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Choose a Campaign</string>
+	<string>Choose a Campaign</string>
 	<key>output</key>
 	<string>openAsNewDocument</string>
 	<key>uuid</key>

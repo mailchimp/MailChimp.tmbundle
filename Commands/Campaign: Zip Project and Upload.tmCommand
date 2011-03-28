@@ -20,7 +20,7 @@ exit_show_html
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Zip Project and Upload</string>
+	<string>Zip Campaign and Upload</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>uuid</key>

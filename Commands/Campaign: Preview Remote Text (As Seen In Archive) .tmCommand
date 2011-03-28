@@ -15,7 +15,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Preview Text (Archive from MailChimp)</string>
+	<string>Preview Text Campaign (from MailChimp)</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>uuid</key>
