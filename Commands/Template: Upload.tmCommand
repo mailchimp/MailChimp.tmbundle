@@ -10,10 +10,8 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" template upload)
 if [[ $THEOUTPUT == "" ]]; then
 	echo "Uploaded..."
-	exit_show_tool_tip
 fi
 echo "$THEOUTPUT"
-exit_show_html
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -22,7 +20,7 @@ exit_show_html
 	<key>name</key>
 	<string>Upload Current Template</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>71FE5E76-62E8-4905-8A11-BDA3400A88AE</string>
 </dict>

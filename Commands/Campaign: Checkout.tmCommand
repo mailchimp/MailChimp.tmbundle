@@ -11,10 +11,8 @@ THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign select)
 if [[ $THEOUTPUT == "" ]]; then
 	echo "Switched campaigns..."
 	rescan_project
-	exit_show_tool_tip
 fi
 echo "$THEOUTPUT"
-exit_show_html
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -23,7 +21,7 @@ exit_show_html
 	<key>name</key>
 	<string>Choose a Campaign</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>FA574857-9269-43CB-895E-274A8D4F2568</string>
 </dict>

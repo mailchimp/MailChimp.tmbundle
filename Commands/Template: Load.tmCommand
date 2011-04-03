@@ -10,7 +10,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" template do source)
 if [[ $THEOUTPUT == "" ]]; then
   echo "Cancelled..."
-  exit_show_tool_tip
+  exit_show_html
 fi
 echo "$THEOUTPUT"
 </string>

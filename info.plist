@@ -6,6 +6,7 @@
 	<dict>
 		<key>items</key>
 		<array>
+			<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
 			<string>F0118E02-401A-406E-8D6D-5A0D85D26F2F</string>
 			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>
 			<string>419523D0-5D90-44D3-A683-2F1E684DF13F</string>
@@ -26,7 +27,6 @@
 					<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
 					<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
 					<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
-					<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
 				</array>
 				<key>name</key>
 				<string>Helpers</string>
@@ -101,6 +101,7 @@
 	<string>MailChimp</string>
 	<key>ordering</key>
 	<array>
+		<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
 		<string>FA574857-9269-43CB-895E-274A8D4F2568</string>
 		<string>BB1EB225-D122-4338-90C3-8F0A768EAB1A</string>
 		<string>737B3B80-AFDF-41F7-ABAB-C1EB0F349EBD</string>
@@ -114,7 +115,6 @@
 		<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
 		<string>1A990D67-F06B-4D62-842C-0D768AE9EA49</string>
 		<string>E0445174-4E3C-4818-9D80-34680033BDF5</string>
-		<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
 		<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
 		<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
 		<string>AC8D6A7A-F37A-4D57-9240-C6D16B1FD280</string>
