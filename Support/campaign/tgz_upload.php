@@ -14,7 +14,7 @@ $to_tar = getenv('TM_PROJECT_DIRECTORY');
 $tar_file = sys_get_temp_dir().DIRECTORY_SEPARATOR.'mc_to_upload.tgz';
 
 // Pipe to dev null, since we don't care about the results from the tar
-$tar_cmd = "tar --exclude-from='".TAR_EXCLUSION_LIST."' -cvzf {$tar_file} {$to_tar} &> /dev/null &";
+$tar_cmd = "tar --exclude-from='".TAR_EXCLUSION_LIST."' -cvzf {$tar_file} '{$to_tar}' &> /dev/null &";
 
 exec($tar_cmd);
 
