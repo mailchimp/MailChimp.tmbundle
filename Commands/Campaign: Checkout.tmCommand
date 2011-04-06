@@ -9,10 +9,12 @@
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign select)
 if [[ $THEOUTPUT == "" ]]; then
-	echo "Switched campaigns..."
-	rescan_project
+	echo "Switched campaigns...&lt;br&gt;"
+# Choose not downloads the campaign right away
+	"$TM_BUNDLE_SUPPORT/runner.php" campaign get
 fi
 echo "$THEOUTPUT"
+rescan_project
 </string>
 	<key>input</key>
 	<string>none</string>
