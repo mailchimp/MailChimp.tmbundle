@@ -15,7 +15,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>name</key>
 	<string>Connect to MailChimp</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
 </dict>
