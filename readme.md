@@ -4,12 +4,27 @@ Mailchimp Textmate Bundle
 o-o-a-a.
 --------
 
-Initial list of functionality we are looking to implement, plus some related notes.
+Getting Started
+---------------
 
-(x is rough done)
+See videos. Temporary living at: http://mitchell.amihod.com/mc/
 
 Commands
 --------
+
+* Connect to MailChimp: Prompts you to enter your API key. Will save it in the folder you are working in for this Campaign or Template
+
+* Templates
+  * Upload Current Template: Will upload your USER template that you are currently working on.   
+  * Preview Template (from MailChimp): View the rendered version of the Source (on MC) from our popup preview. Allows you to look at User, Gallery, or Base Templates
+  * Pull HTML generated from Template (from MailChimp): Will let you load the generated HTML source into a whatever file you currently have open. No template tags.
+  * Get a Template (from MailChimp): Will replace whatever your current open document with a template, with all the template tags from MailChimp. You'd use this to fetch a copy of a template to work on.
+  * Choose a Template: Sets the Template ID to whichever template you choose. This is the Template you will be working on. This controls which Template is affected when you select upload. Replaces current document with the content of the template. Only presents the User Template choices. 
+  * Open Template In MailChimp: Goto the Edit page for this template on MailChimp site.
+  * New Template from Current File: Will ask for a name, and save the current file as a new template with that name, and switch you to the new template.
+
+-
+
 * Campaign
   * x Select: Choose which campaign to work on. Only displays draft (saved) campaigns
   * x campaignContent (get)
@@ -28,20 +43,7 @@ Commands
   * x Merge Tags Menu (from list) Insertion
   * Merge Tag Cheat Sheet?
   * x Info on current campaign
-  
-* Templates
-  * x Preview From MC: Rendered version of the Source (on MC) from our popup preview. Allows you to look at User/Gallery/Base
-  * x Select: Browse and Pull down the source for a template.   
-              Sets the Template ID in mc.ini  
-              Currently allows User/Gallery/Base. This will change to match workflow a bit more 
-              ie: you can only Upload your User templates, so it might make sense to split this into 2 distinct functions
-              one to load a user template/ set the template_id for the current project, and one just to suck in a 
-              gallery or base template as a starting point without setting the template ID
-  * x Upload: Will upload your USER template that you are currently working on. 
-  * x Open In MailChimp: Goto the Edit page for this template on mailchimp site.
-  * x New from file: Will ask for a name, and save the current file as a new template with that name, 
-                     and switch you to the new template.
-  
+   
 * Helpers (transformers, previews)
   * x Init: Enter your API KEY. This should happen on first use of bundle, so no need to call it explicitly
   * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
