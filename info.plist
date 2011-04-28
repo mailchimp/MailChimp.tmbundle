@@ -4,6 +4,15 @@
 <dict>
 	<key>mainMenu</key>
 	<dict>
+		<key>excludedItems</key>
+		<array>
+			<string>0A5A5604-A074-44E7-9D60-ECAEED86521B</string>
+			<string>E981A683-1630-4FF7-A12F-9CB3DED62B06</string>
+			<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
+			<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
+			<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
+			<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
+		</array>
 		<key>items</key>
 		<array>
 			<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
@@ -11,8 +20,6 @@
 			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>
 			<string>419523D0-5D90-44D3-A683-2F1E684DF13F</string>
 			<string>466F480E-1D16-402A-9289-91EC820519FB</string>
-			<string>------------------------------------</string>
-			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -65,20 +72,6 @@
 				</array>
 				<key>name</key>
 				<string>Templates</string>
-			</dict>
-			<key>F33C70E9-C8BD-483D-A756-9DA3546A5853</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>0A5A5604-A074-44E7-9D60-ECAEED86521B</string>
-					<string>E981A683-1630-4FF7-A12F-9CB3DED62B06</string>
-					<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
-					<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
-					<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
-					<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
-				</array>
-				<key>name</key>
-				<string>Test</string>
 			</dict>
 			<key>F671A52D-09DE-4728-9BD3-9261091BF70E</key>
 			<dict>
