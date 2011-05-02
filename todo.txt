@@ -1,13 +1,17 @@
 todo 
 
 * Rename html.html to use index.html. i think that would make more sense. who works with html.html???
-* video showing people how to make a macro to combine commmands
 * cache result of listMergeVars for each campaign when switching, + add reload command
 * better exit/error handlign
-* ask steve if api key always 32chars + datacenter code
+* change Template select prompt to display My Templates, Template Gallery, Start from Scratch for user,gallery,base respectively
+
+answers
+
+* ask steve if api key always 32chars + datacenter code (YES - I don't believe there is any talk of it changing)
 
 potential features
 
+* video showing people how to make a macro to combine commmands (for me, power users will know how to do this, others won't care)
 * could possibly also build up the popup for them with defaults as well?
 * Replicate use sent, archived?
 * locale
