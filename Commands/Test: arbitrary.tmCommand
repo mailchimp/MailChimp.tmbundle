@@ -10,8 +10,6 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 "$TM_BUNDLE_SUPPORT/runner.php" ../Test test_arb</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^@</string>
 	<key>name</key>
 	<string>Test: arbitrary</string>
 	<key>output</key>
