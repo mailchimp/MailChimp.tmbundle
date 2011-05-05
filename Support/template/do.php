@@ -9,18 +9,29 @@
 $UI = new UI(getenv('DIALOG'));
 
 //Begin Template Type Selection
-$template_options = array('user'=>false, 'gallery'=>false,'base'=>false );
+// user, gallery, base
+$template_types = array('My Templates'=>false, 'Template Gallery'=>false,'Start From Scratch'=>false );
 
 $template_type = $UI->requestItem(array(
-    'items'=>array_keys($template_options),
+    'items'=>array_keys($template_types),
     'title'=>__('modal_select_template_type_title'),
     'prompt'=>__('modal_select_template_type_prompt')
 ));
 
 if(empty($template_type)) { exit(); }
 
-$template_options[$template_type] = true;
+//Set the one we will be interested in to true, then we map the values to the 
+//actual keys we pass to MC
+$template_types[$template_type] = true;
+
+$template_options = array_combine(array('user', 'gallery','base'), $template_types);
+
+//Convert Template Type to the proper MC recognized type
+//We know only one item can be true, so use that.
+$template_type = array_search(true, $template_options, true);
+
 ////////End Template Type User Choice Selection
+
 $retval = $api->templates($template_options);
 $oopsy->go($api->errorCode, $api->errorMessage, __('error_template_fetch'));
 

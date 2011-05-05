@@ -1,8 +1,6 @@
 todo 
-* Clear API Key Info (delete the actual settings file)
 * Choosing a campaign - if its a template, throw up an error message "You cannot generate campaign from this."
 * cache result of listMergeVars for each campaign when switching, + add reload command
-* change Template select prompt to display My Templates, Template Gallery, Start from Scratch for user,gallery,base respectively
 * Send Test Email
 
 potential features
