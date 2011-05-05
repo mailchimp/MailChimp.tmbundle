@@ -1,5 +1,4 @@
 todo 
-* Choosing a campaign - if its a template, throw up an error message "You cannot generate campaign from this."
 * cache result of listMergeVars for each campaign when switching, + add reload command
 
 potential features

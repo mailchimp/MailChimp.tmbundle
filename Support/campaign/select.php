@@ -19,7 +19,8 @@ foreach($campaigns as $campaign){
     $campHash[str_replace("'", "", $campaign['title'])] = array(
         'title'=>$campaign['title'],
         'list_id' => $campaign['list_id'],
-        'campaign_id' => $campaign['id']
+        'campaign_id' => $campaign['id'],
+        'content_type' => $campaign['content_type']
     );
 }
 
@@ -30,7 +31,12 @@ $response = $UI->requestItem(array(
 ));
 
 if(empty($response)) {
-    exit( 'Cancelled.');
+    exit('Cancelled.');
+}
+
+if('template' == $campHash[$response]['content_type']) {
+    echo __('error_template_no_support');
+    exit();
 }
 
 $config->campaign_id = $campHash[$response]['campaign_id'];
