@@ -13,7 +13,7 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Pull HTML generated from Template (from MailChimp)</string>
+	<string>Get Template without Template Tags</string>
 	<key>output</key>
 	<string>replaceDocument</string>
 	<key>uuid</key>

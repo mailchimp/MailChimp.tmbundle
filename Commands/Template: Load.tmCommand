@@ -19,7 +19,7 @@ echo "$THEOUTPUT"
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Get a Template (from MailChimp)</string>
+	<string>Get Template</string>
 	<key>output</key>
 	<string>replaceDocument</string>
 	<key>uuid</key>
