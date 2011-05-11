@@ -1,5 +1,4 @@
 #Mailchimp TextMate Bundle
-===
 ##Getting Started
 ###Connecting to MailChimp
 You'll need to "Connect to MailChimp" and supply an API Key before using this Bundle.
