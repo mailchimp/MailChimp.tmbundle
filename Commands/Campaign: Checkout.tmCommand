@@ -21,7 +21,7 @@ rescan_project
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Choose a Campaign</string>
+	<string>Select Campaign</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>uuid</key>
