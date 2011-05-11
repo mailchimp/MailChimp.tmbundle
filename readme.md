@@ -1,5 +1,5 @@
-#Mailchimp TextMate Bundle
-
+Mailchimp TextMate Bundle
+===
 ##Getting Started
 ###Connecting to MailChimp
 You'll need to "Connect to MailChimp" and supply an API Key before using this Bundle.
@@ -12,7 +12,8 @@ Within TextMate you can work with any Campaign that has been created using "Past
 ###Connect to MailChimp
 Prompts for an API Key and will create the initial MailChimp connection.
 
-###Templates
+Templates
+===
 ####Select a Template
 Selects a Template to be coded and replaces the current TextMate document with the HTML of the selected Template. When you upload, this is the Template you will be *overwriting*. Only presents Your Templates.
 ####Get a Template (from MailChimp)
@@ -32,7 +33,8 @@ Create a new template from the current open document. This will also select this
 ###Disconnect from MailChimp
 Destroys the API Key information. Use this for security purposes or to connect to different accounts to upload the same Template.
 
-###Campaigns
+Campaigns
+===
 ####Select a Campaign
 Selects a Campaign to be coded and replaces the current TextMate document with the HTML of the selected Campaign. When you upload, this is the Campaign you will be *overwriting*. Only presents Campaigns in Draft(Saved) mode. Creates the files html.html and txt.txt.
 ####Get Current Campaign
@@ -51,7 +53,8 @@ Choose from available Merge Tags to insert into the document. (* TAB)
 ####Get Current Campaign Details
 Print Campaign details to a TextMate status window.
    
-###Helpers
+Helpers
+===
 ####Generate Text-Only from HTML
 Generate a text version of HTML document you are currently in. Opens the result in a new window.
 ####CSS Inliner
@@ -62,4 +65,4 @@ Open the Merge Tag Cheat Sheet KB article.
 Is Everything Chimpy?
 
 ##IMPORTANT
-**This bundle makes calls to the MailChimp API and will not protect you from yourself. Make sure to use some form of version control or work on a copy.**
+**This bundle makes calls to the MailChimp API and will not protect you from yourself. Make sure to use some form of version control or work on copies.**
