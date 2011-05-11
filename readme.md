@@ -8,7 +8,7 @@ There are two ways you can work with a Template. *Choose Bundles->MailChimp->New
 Within TextMate you can work with any Campaign that has been created using "Paste in Code","Import HTML" or using a Custom Template. Campaigns associated with a MailChimp Template can not be edited via the TextMate bundle.
 
 ##Available Commands
-###Connect to MailChimp
+*###Connect to MailChimp
 Prompts for an API Key and will create the initial MailChimp connection.
 
 ###Templates
