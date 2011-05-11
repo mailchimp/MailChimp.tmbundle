@@ -10,9 +10,7 @@ Within TextMate you can work with any Campaign that has been created using "Past
 ##Available Commands
 ###Connect to MailChimp
 Prompts for an API Key and will create the initial MailChimp connection.
-
-Templates
-===
+###Templates
 ####Select a Template
 Selects a Template to be coded and replaces the current TextMate document with the HTML of the selected Template. When you upload, this is the Template you will be *overwriting*. Only presents Your Templates.
 ####Get a Template (from MailChimp)
@@ -27,13 +25,7 @@ Preview the Template as it appears in MailChimp. Use this to look at Your Templa
 Open the Edit page for this template on MailChimp.
 ####New Template from Current File
 Create a new template from the current open document. This will also select this template
-####Campaigns
-
-###Disconnect from MailChimp
-Destroys the API Key information. Use this for security purposes or to connect to different accounts to upload the same Template.
-
-Campaigns
-===
+###Campaigns
 ####Select a Campaign
 Selects a Campaign to be coded and replaces the current TextMate document with the HTML of the selected Campaign. When you upload, this is the Campaign you will be *overwriting*. Only presents Campaigns in Draft(Saved) mode. Creates the files html.html and txt.txt.
 ####Get Current Campaign
@@ -47,21 +39,23 @@ Zips working folder containing assets and uploads it to your MailChimp account.
 Preview the HTML version of your MailChimp Campaign Archive
 ####Preview Text Campaign (from MailChimp)
 Preview the Text-Only version of your MailChimp Campaign Archive
-####Global Merge Tags
-Choose from available Merge Tags to insert into the document. (* TAB)
-####Get Current Campaign Details
-Print Campaign details to a TextMate status window.
-   
-Helpers
-===
-####Generate Text-Only from HTML
-Generate a text version of HTML document you are currently in. Opens the result in a new window.
-####CSS Inliner
-Runs the current document through MailChimp's CSS Inliner Tool and replaces the document with the results. This tool can be stepped. Write the styles you need, run the inliner and then repeat.
+####Insert List Merge Tags
+Choose from available List Merge Tags to insert into the document. (* TAB)
+####Insert Global Merge Tags
+Choose from available Global Merge Tags to insert into the document. (* TAB)
 ####Merge Tag Cheat Sheet
 Open the Merge Tag Cheat Sheet KB article.
+####Get Current Campaign Details
+Print Campaign details to a TextMate status window.
+###Helpers
+####CSS Inliner
+Runs the current document through MailChimp's CSS Inliner Tool and replaces the document with the results. This tool can be stepped. Write the styles you need, run the inliner and then repeat.
+####Generate Text-Only from HTML
+Generate a text version of HTML document you are currently in. Opens the result in a new window.
 ####Check MailChimp Connection
 Is Everything Chimpy?
+###Disconnect from MailChimp
+Destroys the API Key information. Use this for security purposes or to connect to different accounts to upload the same Template.
 
 ##IMPORTANT
 **This bundle makes calls to the MailChimp API and will not protect you from yourself. Make sure to use some form of version control or work on copies.**
