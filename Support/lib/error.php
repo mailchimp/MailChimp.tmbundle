@@ -20,7 +20,8 @@ class ErrorHelper {
         if(empty($code)) { return; }
 
         if($custom) {
-            echo "{$custom}<br>";
+            echo "{$custom}";
+            exit();
         }
         
     	echo "Code={$code}<br>";
