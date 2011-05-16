@@ -3,7 +3,7 @@
 $UI = new UI(getenv('DIALOG'));
 
 if(empty($config->list_id)){
-    $oopsy->go(99, "", __('error_merge_no_list') );
+    $oopsy->go(999, "", __('error_merge_no_list') );
 }
 
 $mergevars = $api->listMergeVars($config->list_id);
