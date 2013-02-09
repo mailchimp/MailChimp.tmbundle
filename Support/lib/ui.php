@@ -196,6 +196,8 @@ class UI {
         	
             $collector = array();
             foreach ($options['items'] as $item) {
+				//Fix & for xml - so will display, and result value will still have &
+				$item = str_replace('&', '&amp;', $item);
                 $collector[] = "<string>{$item}</string>";
             }
             
