@@ -1,14 +1,10 @@
 todo 
-
-* Rename html.html to use index.html. i think that would make more sense. who works with html.html???
-* A Merge Vars cheat sheet/reference. we now have popup for list specific ones. could possibly also build up the popup for them with defaults as well?
-* video showing people how to make a macro to combine commmands
-* make Select use save filter, Replicate use sent, archived?
+* cache result of listMergeVars for each campaign when switching, + add reload command (still mulling over the best way for this - is it even frequent enough that we would need to cache it? What is the right point to cache it)
 
 potential features
 
+* video showing people how to make a macro to combine commmands (for me, power users will know how to do this, others won't care)
+* could possibly also build up the popup for them with defaults as well?
+* Replicate use sent, archived?
 * locale
-* campaignSendTest - trigger a send test to email addy. of course, would need to throw email addy into the config
-* campaignReplicate could be cool
-* make a switch function based on apikeys? http://apidocs.mailchimp.com/1.3/apikeys.func.php
-* update bundle - if user has git, and checked out a verion, update the bundle, preservig their changes - like get bundles, but independant - should be compatible.
+* update bundle - if user has git, and checked out a version, update the bundle, preserving their changes - like get bundles, but independant - should be compatible.

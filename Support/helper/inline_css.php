@@ -3,8 +3,10 @@
 //Leaves the original style tags alone
 $data = stream_get_contents(STDIN);;
 if (! $data){
-    echo "Nothing to work on. You sure you in the right document?";
+    echo __('error_inline_css');
     exit();
 }
+
+//@todo use $oopsy here.
 $retval = $api->inlineCss($data);
 echo $retval;

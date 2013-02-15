@@ -8,21 +8,19 @@
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" campaign upload)
-echo $THEOUTPUT
 if [[ $THEOUTPUT == "" ]]; then
 	echo "Uploaded..."
-	exit_show_tool_tip
 fi
-exit_show_html
+echo "$THEOUTPUT"
 </string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Upload HTML or Text</string>
+	<string>Upload HTML or Text Campaign</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>2D04C020-9894-4260-84D7-46A3161FAD01</string>
 </dict>

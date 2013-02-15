@@ -1,82 +1,61 @@
-Mailchimp Textmate Bundle
-=========================
+#Mailchimp TextMate Bundle
+##Getting Started
+###Connecting to MailChimp
+You'll need to "Connect to MailChimp" and supply an API Key before using this Bundle.
+###Create and Edit Templates
+There are two ways you can work with a Template. *Choose Bundles->MailChimp->New Template from Current File* or *Bundles->MailChimp->Get Template*. If you're creating a new Template, you'll be prompted to enter a name. With "Get Template", you'll be presented with a list of Your Templates.
+###Working with Campaigns
+Within TextMate you can work with any Campaign that has been created using "Paste in Code","Import HTML" or using a Custom Template. Campaigns associated with a MailChimp Template can not be edited via the TextMate bundle.
 
-o-o-a-a.
---------
+##Available Commands
+###Connect to MailChimp
+Prompts for an API Key and will create the initial MailChimp connection.
+###Templates
+####Select a Template
+Selects a Template to be coded and replaces the current TextMate document with the HTML of the selected Template. When you upload, this is the Template you will be *overwriting*. Only presents Your Templates.
+####Get a Template (from MailChimp)
+Will replace your current open document with a template containing all of the HTML, template tags and resource URLs from MailChimp. Use this to fetch a copy of a MailChimp provided Template, like Start-From-Scratch.
+####Get Template without Template Tags
+Same as Get Template, but will strip Template Tag. This is a great starting point for a Campaign draft.
+####Upload Current Template
+Uploads the current template (defined by Select a Template) to your MailChimp account.
+####Preview Template (from MailChimp)
+Preview the Template as it appears in MailChimp. Use this to look at Your Templates, Gallery, or Start-from-Scratch Templates.
+####Open Template In MailChimp
+Open the Edit page for this template on MailChimp.
+####New Template from Current File
+Create a new template from the current open document. This will also select this template
+###Campaigns
+####Select a Campaign
+Selects a Campaign to be coded and replaces the current TextMate document with the HTML of the selected Campaign. When you upload, this is the Campaign you will be *overwriting*. Only presents Campaigns in Draft(Saved) mode. Creates the files html.html and txt.txt.
+####Get Current Campaign
+Downloads the current Campaign (defined with Select a Campaign). Creates or overwrites the files html.html and txt.txt.
+####Upload HTML or Text Campaign
+Will upload text.txt or html.html file - which ever you are working on. Upload HTML only works for pushing to campaign that did "Import From URL" or "Paste In Code"
+####Zip Campaign and Upload
+Zips working folder containing assets and uploads it to your MailChimp account.
+**Geeky Tip: This command will IGNORE any folder called \_local. This is a good place to keep notes, assets, etc. that relate to the project, but won't get uploaded to MailChimp.**
+####Preview HTML Campaign (from MailChimp)
+Preview the HTML version of your MailChimp Campaign Archive
+####Preview Text Campaign (from MailChimp)
+Preview the Text-Only version of your MailChimp Campaign Archive
+####Insert List Merge Tags
+Choose from available List Merge Tags to insert into the document. (* TAB)
+####Insert Global Merge Tags
+Choose from available Global Merge Tags to insert into the document. (* TAB)
+####Merge Tag Cheat Sheet
+Open the Merge Tag Cheat Sheet KB article.
+####Get Current Campaign Details
+Print Campaign details to a TextMate status window.
+###Helpers
+####CSS Inliner
+Runs the current document through MailChimp's CSS Inliner Tool and replaces the document with the results. This tool can be stepped. Write the styles you need, run the inliner and then repeat.
+####Generate Text-Only from HTML
+Generate a text version of HTML document you are currently in. Opens the result in a new window.
+####Check MailChimp Connection
+Is Everything Chimpy?
+###Disconnect from MailChimp
+Destroys the API Key information. Use this for security purposes or to connect to different accounts to upload the same Template.
 
-Initial list of functionality we are looking to implement, plus some related notes.
-
-Focus is on Campaigns initially, then fill in template stuff after
-
-(x is rough done)
-
-Commands
---------
-* Campaign
-  * x Select: Choose which campaign to work on. Only displays draft (saved) campaigns
-  * x campaignContent (get)
-  * x Upload HTML or Text: Allows uploading of text.txt or html.html file. 
-    * (known limitation: html only works for pushing to campaign that did import. templates need some work)
-  * x Zip Project and Upload
-    * Create a new folder/project. Work as normal. When ready, use this command to push all assets up.
-    * This command will IGNORE a folder called \_local if you have one in your project.   
-      This is a good place to keep notes, assets, etc that relate to the project, but don't   
-      get uploaded
-  * Render Campaign Text 
-    * x remote - archive version
-  * Render Campaign HTML
-    * x remote - archive version
-    * (local will work provided user fills in mock: http://kb.mailchimp.com/article/merge-tag-cheatsheet-for-campaigns)
-  * x Merge Tags Menu (from list) Insertion
-  * Merge Tag Cheat Sheet?
-  * x Info on current campaign
-  
-* Templates (needs some more information re: direction for templates)
-  * x List all Templates ( Template: Source / Preview  )
-  * addnew / update (push + pull)
-    * incorporate uploading static assets elsewhere 
-    (createCampaign seems you can set content as archive - 
-    so, there should be a way to do that via update)
-  * x Preview HTML
-  
-  
-* Helpers (transformers, previews)
-  * x generateText : generate a text version of HTML document you are currently in. Opens in a new window
-  * x inlinecss : Will take the document you are working on, pass it through MailChimp's inlineCSSer, and replace the text. You can actually work in steps with this, writing just the styles you need, and then triggering. to build up the inline. (make video to make this clearer)
-  * x ping - make sure chimp is alive!
-
-Getting Started
----------------
-
-* make a new folder for your project. create a file, **mc.ini** inside that folder
-* inside **mc.ini** add the line: api_key="Your_API_Key_Here_Ok-us2"
-* drag folder onto Textmate to make a new project
-* Campaign: Select will allow you switch between campaigns
-* Campaign: Get will download the .html + .txt
-
-Things you should know
-----------------------
-
-* Macros: In general, tried to keep the pieces of the bundle fairly tight - small responsibilities
-  This will allow you (the user) to setup commands which meet your workflow needs more precisely
-  For example, see the Upload and Preview macro included with this bundle.
-* If you have a folder called **\_local** the bundle will ignore it by default
-  This gives you a place to store notes, assets and whatnot as you work. 
-
-
-Followup
---------
-
-get feedback from chimp inhouse / top theme people what pain points they have?
-
-
-Targets
--------
-
-Textmate/OSX/php5.2  
-  
-IDEAS
------
-
-* snippets for template dev (is there a bundle already we can integrate with?)
-* mailchimp tm language file - http://mailchimp.com/features/template-language/
+##IMPORTANT
+**This bundle makes calls to the MailChimp API and will not protect you from yourself. Make sure to use some form of version control or work on copies.**

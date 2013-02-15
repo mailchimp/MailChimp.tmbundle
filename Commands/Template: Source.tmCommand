@@ -7,15 +7,21 @@
 	<key>command</key>
 	<string>#!/usr/bin/env bash
 source "$TM_SUPPORT_PATH/lib/bash_init.sh"
-"$TM_BUNDLE_SUPPORT/runner.php" template do source</string>
+THEOUTPUT=$("$TM_BUNDLE_SUPPORT/runner.php" template select)
+if [[ $THEOUTPUT == "" ]]; then
+  echo "Cancelled..."
+  exit_show_html
+fi
+echo "$THEOUTPUT"
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>^#</string>
 	<key>name</key>
-	<string>Template: Source</string>
+	<string>Select Template</string>
 	<key>output</key>
-	<string>openAsNewDocument</string>
+	<string>replaceDocument</string>
 	<key>uuid</key>
 	<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
 </dict>

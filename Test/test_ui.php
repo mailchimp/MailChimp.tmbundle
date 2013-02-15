@@ -1,11 +1,27 @@
 <?php 
-include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'head.php';
-
+// include getenv('TM_BUNDLE_SUPPORT').DIRECTORY_SEPARATOR.'head.php';
+//echo getenv('TM_SUPPORT_PATH');
 // UI TEST / EXAMPLE
 $UI = new UI(getenv('DIALOG'));
 // $UI_TWO = new UI(getenv('DIALOG_1'));
 
 // $UI->help();
+
+// Example: Using Request Item
+// $items = array('id'=>'title', 'id2'=>'title2');
+// $selection = $UI->requestItem(array('items'=>$items));
+// echo("You chose: ".$selection);
+////////////////////
+
+// Using Request Input
+$user_input = $UI->input(array('title'=>'Title Here', 'prompt'=> 'Prompt User!', 'default'=>''));
+echo("You entered: ".$user_input);
+//////////////////////
+
+// Using Password Style input
+$user_input = $UI->input(array('title'=>'Title Here', 'prompt'=> 'Prompt User!', 'default'=>''), true);
+echo("You entered: ".$user_input);
+//////////////////////
 
 
 // Simple Message
@@ -31,4 +47,10 @@ $UI = new UI(getenv('DIALOG'));
 // var_dump($response);
 
 // $UI->popup(array('foo','bar', 'long title'));
-$UI->popup_x(array('foo','bar', 'long title'));
+// $UI->popup_x(array('foo','bar', 'long title'));
+
+// $res = `$(CocoaDialog inputbox --title "I Need Input" \
+//     --informative-text "Please give me a string:" \
+//     --button1 "Okay" --button2 "Cancel")`;
+// 
+// var_dump($res);

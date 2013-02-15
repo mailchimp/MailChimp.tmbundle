@@ -11,12 +11,14 @@ source "$TM_SUPPORT_PATH/lib/bash_init.sh"
 </string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^#</string>
 	<key>name</key>
-	<string>Campaign: Insert Merge Var</string>
+	<string>Insert List Merge Tag</string>
 	<key>output</key>
 	<string>afterSelectedText</string>
+	<key>scope</key>
+	<string>source.html,text.html,text.plain</string>
+	<key>tabTrigger</key>
+	<string>*</string>
 	<key>uuid</key>
 	<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
 </dict>

@@ -4,38 +4,40 @@
 <dict>
 	<key>mainMenu</key>
 	<dict>
+		<key>excludedItems</key>
+		<array>
+			<string>0A5A5604-A074-44E7-9D60-ECAEED86521B</string>
+			<string>E981A683-1630-4FF7-A12F-9CB3DED62B06</string>
+			<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
+			<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
+			<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
+			<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
+		</array>
 		<key>items</key>
 		<array>
-			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>
+			<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
 			<string>F0118E02-401A-406E-8D6D-5A0D85D26F2F</string>
+			<string>F671A52D-09DE-4728-9BD3-9261091BF70E</string>
 			<string>419523D0-5D90-44D3-A683-2F1E684DF13F</string>
-			<string>2D7993E7-1E00-4759-999F-D27744FE8BC1</string>
-			<string>F33C70E9-C8BD-483D-A756-9DA3546A5853</string>
 			<string>466F480E-1D16-402A-9289-91EC820519FB</string>
+			<string>7415BFEE-0EDA-4AF3-9C99-752A4F0E1856</string>
 		</array>
 		<key>submenus</key>
 		<dict>
-			<key>2D7993E7-1E00-4759-999F-D27744FE8BC1</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>E38A7242-12D9-47F4-915A-37200980ABA8</string>
-					<string>8D0DCD8B-44EC-494C-B242-97D2531CA2B4</string>
-				</array>
-				<key>name</key>
-				<string>Preview</string>
-			</dict>
 			<key>419523D0-5D90-44D3-A683-2F1E684DF13F</key>
 			<dict>
 				<key>items</key>
 				<array>
 					<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
+					<string>1A990D67-F06B-4D62-842C-0D768AE9EA49</string>
+					<string>E0445174-4E3C-4818-9D80-34680033BDF5</string>
+					<string>------------------------------------</string>
 					<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
 					<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
 					<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
 				</array>
 				<key>name</key>
-				<string>Helper</string>
+				<string>Helpers</string>
 			</dict>
 			<key>466F480E-1D16-402A-9289-91EC820519FB</key>
 			<dict>
@@ -46,28 +48,31 @@
 				<key>name</key>
 				<string>Macros Example</string>
 			</dict>
+			<key>CA0CA4B6-5673-4837-B432-395F48B9516D</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>24CB4E3C-AAAB-4F92-9379-BBA3D7A558F0</string>
+					<string>315E02C0-9204-4DDF-BEF1-A68A363BC7D9</string>
+				</array>
+				<key>name</key>
+				<string>Editable</string>
+			</dict>
 			<key>F0118E02-401A-406E-8D6D-5A0D85D26F2F</key>
 			<dict>
 				<key>items</key>
 				<array>
-					<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+					<string>51515F73-E28F-460C-8B0D-F55B90C1664D</string>
 					<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
+					<string>AC8D6A7A-F37A-4D57-9240-C6D16B1FD280</string>
+					<string>8E7925FC-A5A3-476A-94AC-676EEEA6EC43</string>
+					<string>71FE5E76-62E8-4905-8A11-BDA3400A88AE</string>
+					<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+					<string>096C895E-5610-4391-8A61-6F3B906959C8</string>
+					<string>CA0CA4B6-5673-4837-B432-395F48B9516D</string>
 				</array>
 				<key>name</key>
 				<string>Templates</string>
-			</dict>
-			<key>F33C70E9-C8BD-483D-A756-9DA3546A5853</key>
-			<dict>
-				<key>items</key>
-				<array>
-					<string>E981A683-1630-4FF7-A12F-9CB3DED62B06</string>
-					<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
-					<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
-					<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
-					<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
-				</array>
-				<key>name</key>
-				<string>Test</string>
 			</dict>
 			<key>F671A52D-09DE-4728-9BD3-9261091BF70E</key>
 			<dict>
@@ -78,6 +83,9 @@
 					<string>2D04C020-9894-4260-84D7-46A3161FAD01</string>
 					<string>F1BF7E52-4E44-47BF-802F-46AD9FCABEC7</string>
 					<string>------------------------------------</string>
+					<string>E38A7242-12D9-47F4-915A-37200980ABA8</string>
+					<string>8D0DCD8B-44EC-494C-B242-97D2531CA2B4</string>
+					<string>883F315D-9936-4252-942C-8089D46A3411</string>
 					<string>737B3B80-AFDF-41F7-ABAB-C1EB0F349EBD</string>
 				</array>
 				<key>name</key>
@@ -86,9 +94,11 @@
 		</dict>
 	</dict>
 	<key>name</key>
-	<string>mailchimp</string>
+	<string>MailChimp</string>
 	<key>ordering</key>
 	<array>
+		<string>A69275C9-CE10-40E9-B4A3-E0A81A934C91</string>
+		<string>7415BFEE-0EDA-4AF3-9C99-752A4F0E1856</string>
 		<string>FA574857-9269-43CB-895E-274A8D4F2568</string>
 		<string>BB1EB225-D122-4338-90C3-8F0A768EAB1A</string>
 		<string>737B3B80-AFDF-41F7-ABAB-C1EB0F349EBD</string>
@@ -96,17 +106,29 @@
 		<string>F1BF7E52-4E44-47BF-802F-46AD9FCABEC7</string>
 		<string>E38A7242-12D9-47F4-915A-37200980ABA8</string>
 		<string>8D0DCD8B-44EC-494C-B242-97D2531CA2B4</string>
+		<string>883F315D-9936-4252-942C-8089D46A3411</string>
 		<string>8E33970C-F104-4328-AB9E-9650ADC727E5</string>
 		<string>ACCFE079-306C-4A52-A993-CE856ECA4F87</string>
 		<string>F9CA9380-71EB-4EA0-91C6-794A39D248CE</string>
 		<string>2B354ABD-A6E6-4339-A570-3AE9846922E2</string>
-		<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+		<string>1A990D67-F06B-4D62-842C-0D768AE9EA49</string>
+		<string>E0445174-4E3C-4818-9D80-34680033BDF5</string>
 		<string>1A99E0C7-8006-44A7-8E82-E700D88B8F18</string>
+		<string>573C5977-525D-409B-B062-6E5B991B1EBA</string>
+		<string>8E7925FC-A5A3-476A-94AC-676EEEA6EC43</string>
+		<string>AC8D6A7A-F37A-4D57-9240-C6D16B1FD280</string>
+		<string>71FE5E76-62E8-4905-8A11-BDA3400A88AE</string>
+		<string>096C895E-5610-4391-8A61-6F3B906959C8</string>
+		<string>51515F73-E28F-460C-8B0D-F55B90C1664D</string>
 		<string>42E62F90-E4BE-4C13-83F1-906791252870</string>
 		<string>1B478D52-F06D-4B91-8982-932E6421FAA9</string>
 		<string>6D22F9B6-32D6-409F-B80C-6958C0AE1079</string>
+		<string>0A5A5604-A074-44E7-9D60-ECAEED86521B</string>
 		<string>E981A683-1630-4FF7-A12F-9CB3DED62B06</string>
 		<string>1E34BE62-5C97-486B-AFBE-69EACF65E7D0</string>
+		<string>9D53DA7E-E721-42F7-8EE6-7BE34EA88886</string>
+		<string>24CB4E3C-AAAB-4F92-9379-BBA3D7A558F0</string>
+		<string>315E02C0-9204-4DDF-BEF1-A68A363BC7D9</string>
 	</array>
 	<key>uuid</key>
 	<string>51236356-25E8-498D-A5C1-68312B715215</string>
