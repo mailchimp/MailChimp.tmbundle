@@ -1,5 +1,6 @@
 todo 
 * cache result of listMergeVars for each campaign when switching, + add reload command (still mulling over the best way for this - is it even frequent enough that we would need to cache it? What is the right point to cache it)
+* Make easier preview current working template
 
 potential features
 
